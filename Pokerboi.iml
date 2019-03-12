@@ -17,5 +17,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Pokerboi" level="project" />
+    <orderEntry type="library" name="src" level="project" />
   </component>
 </module>
