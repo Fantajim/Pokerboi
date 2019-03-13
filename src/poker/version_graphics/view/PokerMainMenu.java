@@ -9,10 +9,8 @@ import poker.version_graphics.model.PokerGameModel;
 public class PokerMainMenu {
 
     private Mainmenu mainmenu;
-    private PokerGameModel model;
 
-    public PokerMainMenu(Stage stage, PokerGameModel model) {
-        this.model = model;
+    public PokerMainMenu(Stage stage) {
 
         //Create Main menu
         mainmenu = new Mainmenu();
@@ -23,6 +21,11 @@ public class PokerMainMenu {
         stage.show();
     }
 
+    public Button getPlayButton(){ return mainmenu.play;}
+    public String getSelection(){
+    ToggleButton temp = (ToggleButton)mainmenu.radiotoggle.getSelectedToggle();
+    return temp.getText();
+    }
 
 
 }
