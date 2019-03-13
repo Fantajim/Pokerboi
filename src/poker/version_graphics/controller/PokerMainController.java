@@ -12,7 +12,7 @@ public class PokerMainController {
 
      view.getPlayButton().setOnAction(event -> {
          PokerGame.setNumPlayers(view.getSelection());
-         PokerGame.startGame();
+         /*PokerGame.startGame();abc*/
      });
 
     }
