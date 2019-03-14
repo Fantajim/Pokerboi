@@ -48,7 +48,7 @@ public class PokerGameView {
         scene.getStylesheets().add(
                 getClass().getResource("poker.css").toExternalForm());
         stage.setTitle("Poker Miniproject");
-        stage.setScene(mainscene);
+        stage.setScene(scene);
         stage.show();
 
 	}
@@ -66,7 +66,11 @@ public class PokerGameView {
 		return controls.btnDeal;
 	}
 
-
+	public Button getPlayButton(){ return mainmenu.play;}
+	public String getSelection(){
+		ToggleButton temp = (ToggleButton)mainmenu.radiotoggle.getSelectedToggle();
+		return temp.getText();
+	}
 
 
 
