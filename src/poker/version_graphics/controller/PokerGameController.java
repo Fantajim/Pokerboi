@@ -9,7 +9,6 @@ import poker.version_graphics.model.Player;
 import poker.version_graphics.model.PokerGameModel;
 import poker.version_graphics.view.PlayerPane;
 import poker.version_graphics.view.PokerGameView;
-import poker.version_graphics.view.PokerMainMenu;
 
 public class PokerGameController {
 	private PokerGameModel model;

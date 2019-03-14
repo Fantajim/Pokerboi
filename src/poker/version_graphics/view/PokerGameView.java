@@ -47,7 +47,7 @@ public class PokerGameView {
 		mainscene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
         scene.getStylesheets().add(
                 getClass().getResource("poker.css").toExternalForm());
-        stage.setTitle("Poker Miniproject");
+        stage.setTitle("Poker Project");
         stage.setScene(scene);
         stage.show();
 
