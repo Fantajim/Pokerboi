@@ -9,8 +9,8 @@ import poker.version_graphics.model.DeckOfCards;
 public class ControlArea extends HBox{
     private DeckLabel lblDeck = new DeckLabel();
     private Region spacer = new Region(); // Empty spacer
-    Button btnShuffle = new Button("Shuffle");
-    Button btnDeal = new Button("Deal");
+    static Button btnShuffle = new Button("Shuffle");
+    static Button btnDeal = new Button("Deal");
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!

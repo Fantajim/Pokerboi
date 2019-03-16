@@ -17,6 +17,7 @@ public class PokerGameController {
 	public PokerGameController(PokerGameModel model, PokerGameView view) {
 		this.model = model;
 		this.view = view;
+		view.getPlayButton().setOnAction(event -> play());
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
 	}
@@ -61,8 +62,8 @@ public class PokerGameController {
     	}
     }
     private void play(){
-   /* PokerGame.setNumPlayers(view.getSelection());
-    main.startGame();*/
+	PokerGame.NUM_PLAYERS = Integer.parseInt(view.getSelection());
+	view.createGame();
 
 
 	}
