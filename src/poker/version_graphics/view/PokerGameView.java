@@ -25,7 +25,7 @@ public class PokerGameView {
 
 		// Create the control area
 
-		stage.setResizable(false);
+
         // Create the scene using our layout; then display it
 
 		mainmenu = new Mainmenu();
@@ -56,6 +56,9 @@ public class PokerGameView {
 			BorderPane root = new BorderPane();
 			root.setCenter(players);
 			root.setBottom(controls);
+			stage.setX(0);
+			stage.setResizable(false);
+			root.maxWidthProperty().bind(stage.widthProperty());
 			Scene scene = new Scene(root);
 			// Disallow resizing - which is difficult to get right with images
 			scene.getStylesheets().add(
