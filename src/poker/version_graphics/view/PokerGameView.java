@@ -13,7 +13,7 @@ public class PokerGameView {
 	private ControlArea controls;
 	private Mainmenu mainmenu;
 	private PokerGameModel model;
-
+//test222222
 	
 	public PokerGameView(Stage stage, PokerGameModel model) {
 		this.model = model;
