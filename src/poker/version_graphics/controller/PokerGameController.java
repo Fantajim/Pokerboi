@@ -13,10 +13,14 @@ import poker.version_graphics.view.PokerGameView;
 public class PokerGameController {
 	private PokerGameModel model;
 	private PokerGameView view;
+	private Boolean on;
+	private Boolean trigger = false;
 	
 	public PokerGameController(PokerGameModel model, PokerGameView view) {
 		this.model = model;
 		this.view = view;
+		this.on = on;
+		view.getAutoshuffle().setOnAction(event -> autoshuffle());
 		view.getPlayButton().setOnAction(event -> play());
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
@@ -56,14 +60,33 @@ public class PokerGameController {
         		PlayerPane pp = view.getPlayerPane(i);
         		pp.updatePlayerDisplay();
         	}
-    	} else {
+    	}
+    	else if (view.getShuffleButton().isDisable() == true){
+    		if (trigger == false) {
+				view.getDealButton().setText("Shuffle");
+				trigger = !trigger;
+			}
+    		else {
+				shuffle();
+				view.getDealButton().setText("Deal");
+				trigger = !trigger;
+			}
+		}
+    	else {
             Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
             alert.showAndWait();
+
     	}
     }
     private void play(){
 	PokerGame.NUM_PLAYERS = Integer.parseInt(view.getSelection());
 	view.createGame();
+	}
+
+	private void autoshuffle(){
+    view.Toggleautoshuffleview();
+
+
 
 
 	}

@@ -9,8 +9,9 @@ import poker.version_graphics.model.DeckOfCards;
 public class ControlArea extends HBox{
     private DeckLabel lblDeck = new DeckLabel();
     private Region spacer = new Region(); // Empty spacer
-    static Button btnShuffle = new Button("Shuffle");
-    static Button btnDeal = new Button("Deal");
+    Button btnShuffle = new Button("Shuffle");
+    Button btnDeal = new Button("Deal");
+    Boolean temp = false;
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!
@@ -23,5 +24,11 @@ public class ControlArea extends HBox{
     
     public void linkDeck(DeckOfCards deck) {
     	lblDeck.setDeck(deck);
+    }
+    public void toggleAutoshuffle(){
+
+        temp = !temp;
+       btnShuffle.setDisable(temp);
+
     }
 }
