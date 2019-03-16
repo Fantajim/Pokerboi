@@ -1,15 +1,22 @@
 package poker.version_graphics.view;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.layout.*;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import poker.version_graphics.PokerGame;
 import poker.version_graphics.model.PokerGameModel;
 
+import java.awt.*;
+
+
 public class PokerGameView {
 
-	private HBox players;
+	private FlowPane players;
 	private ControlArea controls;
 	private Mainmenu mainmenu;
 	private PokerGameModel model;
@@ -42,7 +49,7 @@ public class PokerGameView {
 		stage.close();
 
 		// Create all of the player panes we need, and put them into an HBox
-		players = new HBox();
+		players = new FlowPane();
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
@@ -56,9 +63,19 @@ public class PokerGameView {
 			BorderPane root = new BorderPane();
 			root.setCenter(players);
 			root.setBottom(controls);
+			Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+			double width = screensize.getWidth();
+			double height = screensize.getHeight();
 			stage.setX(0);
+			stage.setY(0);
 			stage.setResizable(false);
-			root.maxWidthProperty().bind(stage.widthProperty());
+			players.setPrefSize(width,height/2);
+			players.setAlignment(Pos.CENTER);
+			players.setHgap(20);
+			players.setVgap(20);
+			players.setPadding(new Insets(10,0,10,0));
+			/*stage.setHeight(height/2);*/
+			/*stage.maxWidthProperty().bind(stage.widthProperty());*/
 			Scene scene = new Scene(root);
 			// Disallow resizing - which is difficult to get right with images
 			scene.getStylesheets().add(
