@@ -97,7 +97,7 @@ public class PokerGameView {
 		return controls.btnDeal;
 	}
 
-	public Button getPlayButton(){ return mainmenu.play;}
+	public Button getPlayButton(){ return mainmenu.getPlay();}
 
 	public String getSelection(){
 		ToggleButton temp = (ToggleButton)mainmenu.radiotoggle.getSelectedToggle();

@@ -85,6 +85,13 @@ public class PokerGameController {
 
 	private void autoshuffle(){
     view.Toggleautoshuffleview();
+    if (view.getAutoshuffle().getText() == "Autoshuffle") {
+    	view.getAutoshuffle().setText("Autoshuffle \u2713");
+	}
+    else {
+		view.getAutoshuffle().setText("Autoshuffle");
+	}
+
 
 
 

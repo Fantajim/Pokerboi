@@ -19,6 +19,7 @@ public class PlayerPane extends VBox {
     public PlayerPane() {
         super(); // Always call super-constructor first !!
         this.getStyleClass().add("player"); // CSS style class
+        lblEvaluation.setId("evaluation");
         
         // Add child nodes
         this.getChildren().addAll(lblName, hboxCards, lblEvaluation);
