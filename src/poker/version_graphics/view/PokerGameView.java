@@ -24,6 +24,7 @@ public class PokerGameView {
 	private PokerGameModel model;
 	private Stage stage;
 	private Optionbar options;
+	private Scene scene;
 
 	
 	public PokerGameView(Stage stage, PokerGameModel model) {
@@ -32,6 +33,7 @@ public class PokerGameView {
 		this.mainmenu = mainmenu;
 		this.options = options;
 		this.controls = controls;
+		this.scene = scene;
 		options = new Optionbar();
 		mainmenu = new Mainmenu();
 		controls = new ControlArea();
@@ -42,47 +44,48 @@ public class PokerGameView {
         stage.setTitle("Poker Project");
         stage.setScene(mainscene);
         stage.show();
-	}
 
-	public void createGame(){
-		stage.close();
-
-			// Create all of the player panes we need, and put them into an HBox
-			players = new FlowPane();
-			for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+		// Create all of the player panes we need, and put them into an HBox
+		players = new FlowPane();
+		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
 			players.getChildren().add(pp);
-
-
-			controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
-
-			// Put players and controls into a BorderPane
-			BorderPane root = new BorderPane();
-			root.setTop(options);
-			root.setCenter(players);
-			root.setBottom(controls);
-			Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-			double width = screensize.getWidth();
-			double height = screensize.getHeight();
-			stage.setResizable(false);
-			players.setPrefSize(width,height/2);
-			players.setMaxSize(1200,500);
-			players.setAlignment(Pos.CENTER);
-			players.setHgap(20);
-			players.setVgap(20);
-			players.setPadding(new Insets(10,0,10,0));
-			/*stage.setHeight(height/2);*/
-			/*stage.maxWidthProperty().bind(stage.widthProperty());*/
-			Scene scene = new Scene(root);
-			// Disallow resizing - which is difficult to get right with images
-			scene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
-			stage.setTitle("Pokerbooooi");
-			stage.setScene(scene);
-			stage.show();
 		}
 
+		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
+
+		BorderPane root = new BorderPane(); // Put players and controls into a BorderPane
+		root.setTop(options);
+		root.setCenter(players);
+		root.setBottom(controls);
+		Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		double width = screensize.getWidth();
+		double height = screensize.getHeight();
+		stage.setResizable(false); // Disallow resizing - which is difficult to get right with images
+		players.setPrefSize(width,height/2);
+		players.setMaxSize(1200,500);
+		players.setAlignment(Pos.CENTER);
+		players.setHgap(20);
+		players.setVgap(20);
+		players.setPadding(new Insets(10,0,10,0));
+		scene = new Scene(root);
+		scene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
+
+
+
 	}
+
+	public void createGame(){
+
+		getStage().close();
+		getStage().setTitle("Pokerbooooi");
+		getStage().setScene(getScene());
+		getStage().show();
+
+		}
+
+
 
 	public PlayerPane getPlayerPane(int i) {
 		return (PlayerPane) players.getChildren().get(i);
@@ -110,6 +113,13 @@ public class PokerGameView {
 
 	public void Toggleautoshuffleview(){
 		controls.toggleAutoshuffle();
+	}
+
+	public Scene getScene(){
+		return scene;
+	}
+	public Stage getStage(){
+		return stage;
 	}
 
 }
