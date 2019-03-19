@@ -26,10 +26,11 @@ public class ControlArea extends HBox{
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!
-        HBox deckhbox = new HBox(classic,dog,old);
-    	this.getChildren().addAll(lblDeck, addPlayer,remPlayer,decks,deckhbox, spacer, btnShuffle, btnDeal);
-        this.setMargin(deckhbox, new Insets(5,0,0,-15));
-        deckhbox.setSpacing(10);
+        HBox deckbox = new HBox(classic,dog,old);
+        deckbox.setSpacing(10);
+        deckbox.setId("deckbox");
+    	this.getChildren().addAll(lblDeck, addPlayer,remPlayer,decks,deckbox, spacer, btnShuffle, btnDeal);
+        this.setMargin(deckbox, new Insets(5,0,0,-15));
         HBox.setHgrow(spacer, Priority.ALWAYS); // Use region to absorb resizing
         this.setId("controlArea"); // Unique ID in the CSS
     }
