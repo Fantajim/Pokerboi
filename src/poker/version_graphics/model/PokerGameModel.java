@@ -23,4 +23,16 @@ public class PokerGameModel {
 	public DeckOfCards getDeck() {
 		return deck;
 	}
+
+	public void remPlayer() {
+	players.remove((getPlayer(PokerGame.NUM_PLAYERS-1)));
+
+	}
+
+	public void addPlayer() {
+	players.add(new Player("Player " + (PokerGame.NUM_PLAYERS+1)));
+
+	}
 }
+
+

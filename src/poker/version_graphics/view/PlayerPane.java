@@ -12,6 +12,7 @@ public class PlayerPane extends VBox {
     private Label lblName = new Label();
     private HBox hboxCards = new HBox();
     private Label lblEvaluation = new Label("--");
+    private CardLabel cl;
     
     // Link to player object
     private Player player;
@@ -50,4 +51,11 @@ public class PlayerPane extends VBox {
     			lblEvaluation.setText("--");
     	}
     }
+
+    public void clearDisplay() {
+    cl.setCard(null);
+
+    }
+
+
 }

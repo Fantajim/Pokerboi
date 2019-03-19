@@ -14,6 +14,7 @@ import poker.version_graphics.model.PokerGameModel;
 
 import java.awt.*;
 import java.awt.Menu;
+import java.util.ArrayList;
 
 
 public class PokerGameView {
@@ -25,6 +26,8 @@ public class PokerGameView {
 	private Stage stage;
 	private Optionbar options;
 	private Scene scene;
+	private PlayerPane pp;
+	private ArrayList<PlayerPane> ppArrayList = new ArrayList<>();
 
 	
 	public PokerGameView(Stage stage, PokerGameModel model) {
@@ -34,6 +37,10 @@ public class PokerGameView {
 		this.options = options;
 		this.controls = controls;
 		this.scene = scene;
+		this.players = players;
+		this.pp = pp;
+		this.ppArrayList = ppArrayList;
+
 		options = new Optionbar();
 		mainmenu = new Mainmenu();
 		controls = new ControlArea();
@@ -48,9 +55,10 @@ public class PokerGameView {
 		// Create all of the player panes we need, and put them into an HBox
 		players = new FlowPane();
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-			PlayerPane pp = new PlayerPane();
+			pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
 			players.getChildren().add(pp);
+			ppArrayList.add(pp);
 		}
 
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
@@ -99,6 +107,14 @@ public class PokerGameView {
 		return controls.btnDeal;
 	}
 
+	public Button getAddPlayer() {
+		return controls.addPlayer;
+	}
+
+	public Button getRemPlayer() {
+		return controls.remPlayer;
+	}
+
 	public Button getPlayButton(){ return mainmenu.getPlay();}
 
 	public String getSelection(){
@@ -122,4 +138,11 @@ public class PokerGameView {
 		return stage;
 	}
 
+	public ArrayList<PlayerPane> getArrayPp () {
+		return ppArrayList;
+	}
+
+	public FlowPane getPlayers() {
+		return players;
+	}
 }

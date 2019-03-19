@@ -24,6 +24,8 @@ public class PokerGameController {
 		view.getPlayButton().setOnAction(event -> play());
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
+		view.getAddPlayer().setOnAction(event -> addPlayer() );
+		view.getRemPlayer().setOnAction(event -> remPlayer());
 	}
 	
 
@@ -91,10 +93,35 @@ public class PokerGameController {
     else {
 		view.getAutoshuffle().setText("Autoshuffle");
 	}
+	}
 
+	private void addPlayer() {
+	if (PokerGame.NUM_PLAYERS < 4){
+	model.addPlayer();
+	view.getPlayers().getChildren().add(view.getArrayPp().get(PokerGame.NUM_PLAYERS));
+	view.getArrayPp().get(PokerGame.NUM_PLAYERS).setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
+	model.getPlayer(PokerGame.NUM_PLAYERS).discardHand();
+	view.getArrayPp().get(PokerGame.NUM_PLAYERS).updatePlayerDisplay();
+	PokerGame.NUM_PLAYERS++;
+	 }
+	else {
+		Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (4)");
+		alert.showAndWait();
 
+	}
 
+	}
 
+	private void remPlayer() {
+	if (PokerGame.NUM_PLAYERS > 1){
+	model.remPlayer();
+	view.getPlayers().getChildren().remove(view.getArrayPp().get(PokerGame.NUM_PLAYERS-1));
+	PokerGame.NUM_PLAYERS--;
+	}
+	else {
+		Alert alert = new Alert(AlertType.ERROR, "Min Player count reached (1)");
+		alert.showAndWait();
 
+	}
 	}
 }
