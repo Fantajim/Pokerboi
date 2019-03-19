@@ -53,16 +53,15 @@ public class PokerGameView {
         stage.show();
 
 		// Create all of the player panes we need, and put them into an HBox
+
 		players = new FlowPane();
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-			players.getChildren().add(pp);
+			getPlayers().getChildren().add(pp);
 			ppArrayList.add(pp);
 		}
-
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
-
 		BorderPane root = new BorderPane(); // Put players and controls into a BorderPane
 		root.setTop(options);
 		root.setCenter(players);
@@ -85,6 +84,8 @@ public class PokerGameView {
 	}
 
 	public void createGame(){
+
+
 
 		getStage().close();
 		getStage().setTitle("Pokerbooooi");
