@@ -29,6 +29,7 @@ public class PokerGameView {
 	private PlayerPane pp;
 	private ArrayList<PlayerPane> ppArrayList = new ArrayList<>();
 
+
 	
 	public PokerGameView(Stage stage, PokerGameModel model) {
 		this.model = model;
@@ -48,9 +49,6 @@ public class PokerGameView {
 		Scene mainscene = new Scene(mainmenu);
 		mainscene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
 
-        stage.setTitle("Poker Project");
-        stage.setScene(mainscene);
-        stage.show();
 
 		// Create all of the player panes we need, and put them into an HBox
 
@@ -78,6 +76,11 @@ public class PokerGameView {
 		players.setPadding(new Insets(10,0,10,0));
 		scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
+
+        stage.setTitle("Poker Project");
+        stage.setScene(scene);
+        stage.show();
+
 
 
 

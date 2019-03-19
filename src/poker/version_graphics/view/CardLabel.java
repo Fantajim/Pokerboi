@@ -37,7 +37,7 @@ public class CardLabel extends Label {
 	}
 
 	private String decks() {
-		ArrayList<String> temp = Mainmenu.getDecks();
+		ArrayList<String> temp = ControlArea.getDecks();
 		Random rand = new Random();
 		int a = temp.size();
 		int b = rand.nextInt((a-1)+1);

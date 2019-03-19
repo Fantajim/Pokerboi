@@ -63,7 +63,7 @@ private static CheckBox old = new CheckBox ("old");
     if ((dog.isSelected()))temp.add(dog.getText());
     if ((old.isSelected()))temp.add(old.getText());
 
-    if (temp.size()==0)temp.add(classic.getText());
+    if (temp.size()== 0)temp.add(classic.getText());
         return temp;
 
 
