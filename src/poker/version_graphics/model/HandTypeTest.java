@@ -33,11 +33,35 @@ public class HandTypeTest {
 			{ "3S", "2C", "3H", "2D", "QH" },
 			{ "9S", "2C", "2H", "5D", "5H" }
 			};
+	private static String[][] threes = {
+			{ "2S", "2C", "2D", "5C", "7H" },
+			{ "5H", "AC", "5D", "5C", "KH" },
+			{ "KH", "2C", "KD", "KC", "QH" },
+			{ "QH", "QD", "2H", "4H", "QC" }
+	};
+	private static String[][] fullHouse = {
+			{ "2S", "2C", "2D", "3S", "3H" },
+			{ "QH", "QC", "QD", "5D", "5C" },
+			{ "3S", "3C", "3H", "2D", "2H" },
+			{ "KH", "KC", "KD", "QH", "QD" }
+
+	};
+	private static String[][] fours = {
+			{ "2S", "2C", "2D", "2H", "3H" },
+			{ "QH", "QC", "QD", "QS", "5C" },
+			{ "3D", "3C", "3H", "2D", "3S" },
+			{ "QH", "KC", "KD", "KH", "KS" }
+
+	};
 	
 	// This is where we store the translated hands
 	ArrayList<ArrayList<Card>> highCardHands;
 	ArrayList<ArrayList<Card>> pairHands;
 	ArrayList<ArrayList<Card>> twoPairHands;
+	ArrayList<ArrayList<Card>> threeHand;
+	ArrayList<ArrayList<Card>> fullHouseHand;
+	ArrayList<ArrayList<Card>> fourHand;
+
 	
 	/**
 	 * The makeHands method is called before each test method,
@@ -49,6 +73,9 @@ public class HandTypeTest {
 		highCardHands = makeHands(highCards);
 		pairHands = makeHands(pairs);
 		twoPairHands = makeHands(twoPairs);
+		threeHand = makeHands(threes);
+		fullHouseHand = makeHands(fullHouse);
+		fourHand = makeHands(fours);
 	}
 
 	/**
@@ -84,7 +111,66 @@ public class HandTypeTest {
 			assertTrue(HandType.isTwoPair(hand));
 		}
 	}
-	
+
+	//Test for three of a kind
+	@Test
+	public void testisThree(){
+		for (ArrayList<Card> hand : threeHand) {
+			assertFalse(HandType.isTwoPair(hand));
+		}
+		for (ArrayList<Card> hand : threeHand) {
+			assertTrue(HandType.isOnePair(hand));
+		}
+		for (ArrayList<Card> hand: threeHand){
+			assertTrue(HandType.isThreeOfAKind(hand));
+		}
+
+	}
+
+	@Test
+	public void testIsFullHouse(){
+		for (ArrayList<Card> hand : fullHouseHand) {
+			assertTrue(HandType.isOnePair(hand));
+		}
+		for (ArrayList<Card> hand : fullHouseHand) {
+ 			assertTrue(HandType.isTwoPair(hand)); //Full House contains two pairs
+		}
+		for (ArrayList<Card> hand: fullHouseHand){
+			assertTrue(HandType.isThreeOfAKind(hand));
+		}
+		for (ArrayList<Card> hand: fullHouseHand){
+			assertTrue(HandType.isFullHouse(hand));
+		}
+		for (ArrayList<Card> hand: fullHouseHand){
+			assertFalse(HandType.isFourOfAKind(hand));
+		}
+		for (ArrayList<Card> hand: fullHouseHand){
+			assertFalse(HandType.isStraight(hand));
+		}
+	}
+
+	@Test
+	public void testIsFour(){
+		for (ArrayList<Card> hand : fourHand) {
+			assertTrue(HandType.isOnePair(hand));
+		}
+		for (ArrayList<Card> hand : fourHand) {
+			assertTrue(HandType.isTwoPair(hand));
+		}
+		for (ArrayList<Card> hand: fourHand){
+			assertTrue(HandType.isThreeOfAKind(hand));
+		}
+		for (ArrayList<Card> hand: fourHand){
+			assertFalse(HandType.isFullHouse(hand));
+		}
+		for (ArrayList<Card> hand: fourHand){
+			assertTrue(HandType.isFourOfAKind(hand));
+		}
+		for (ArrayList<Card> hand: fourHand){
+			assertFalse(HandType.isStraight(hand));
+		}
+	}
+
 	/**
 	 * Make an ArrayList of hands from an array of string-arrays
 	 */

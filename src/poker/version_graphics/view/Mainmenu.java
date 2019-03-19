@@ -1,6 +1,6 @@
 package poker.version_graphics.view;
 
-import com.sun.tools.javac.comp.Check;
+
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;

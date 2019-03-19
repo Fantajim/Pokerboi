@@ -65,10 +65,9 @@ public class PokerGameView {
 			Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 			double width = screensize.getWidth();
 			double height = screensize.getHeight();
-			stage.setX(0);
-			stage.setY(0);
 			stage.setResizable(false);
 			players.setPrefSize(width,height/2);
+			players.setMaxSize(1200,500);
 			players.setAlignment(Pos.CENTER);
 			players.setHgap(20);
 			players.setVgap(20);
