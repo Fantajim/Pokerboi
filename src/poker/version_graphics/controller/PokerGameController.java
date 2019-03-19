@@ -21,7 +21,6 @@ public class PokerGameController {
 		this.view = view;
 		this.on = on;
 		view.getAutoshuffle().setOnAction(event -> autoshuffle());
-		view.getPlayButton().setOnAction(event -> play());
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
 		view.getAddPlayer().setOnAction(event -> addPlayer() );
@@ -80,10 +79,6 @@ public class PokerGameController {
 
     	}
     }
-    private void play(){
-	PokerGame.NUM_PLAYERS = Integer.parseInt(view.getSelection());
-	view.createGame();
-	}
 
 	private void autoshuffle(){
     view.Toggleautoshuffleview();

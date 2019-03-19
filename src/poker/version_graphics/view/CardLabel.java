@@ -9,6 +9,8 @@ import poker.version_graphics.model.Card;
 import java.util.ArrayList;
 import java.util.Random;
 
+
+
 public class CardLabel extends Label {
 	public CardLabel() {
 		super();

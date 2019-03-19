@@ -21,7 +21,6 @@ public class PokerGameView {
 
 	private FlowPane players;
 	private ControlArea controls;
-	private Mainmenu mainmenu;
 	private PokerGameModel model;
 	private Stage stage;
 	private Optionbar options;
@@ -34,7 +33,6 @@ public class PokerGameView {
 	public PokerGameView(Stage stage, PokerGameModel model) {
 		this.model = model;
 		this.stage = stage;
-		this.mainmenu = mainmenu;
 		this.options = options;
 		this.controls = controls;
 		this.scene = scene;
@@ -43,12 +41,7 @@ public class PokerGameView {
 		this.ppArrayList = ppArrayList;
 
 		options = new Optionbar();
-		mainmenu = new Mainmenu();
 		controls = new ControlArea();
-
-		Scene mainscene = new Scene(mainmenu);
-		mainscene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
-
 
 		// Create all of the player panes we need, and put them into an HBox
 
@@ -119,33 +112,22 @@ public class PokerGameView {
 		return controls.remPlayer;
 	}
 
-	public Button getPlayButton(){ return mainmenu.getPlay();}
-
-	public String getSelection(){
-		ToggleButton temp = (ToggleButton)mainmenu.radiotoggle.getSelectedToggle();
-		return temp.getText();
-	}
-
 	public MenuItem getAutoshuffle(){
 		return options.getAutoshuffle();
-
 	}
 
 	public void Toggleautoshuffleview(){
 		controls.toggleAutoshuffle();
 	}
-
 	public Scene getScene(){
 		return scene;
 	}
 	public Stage getStage(){
 		return stage;
 	}
-
 	public ArrayList<PlayerPane> getArrayPp () {
 		return ppArrayList;
 	}
-
 	public FlowPane getPlayers() {
 		return players;
 	}
