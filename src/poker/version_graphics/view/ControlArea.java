@@ -44,4 +44,15 @@ public class ControlArea extends HBox{
 
     }
 
+    public static ArrayList<String> getDecks(){
+        ArrayList<String>temp = new ArrayList<>();
+        if ((classic.isSelected()))temp.add(classic.getText());
+        if ((dog.isSelected()))temp.add(dog.getText());
+        if ((old.isSelected()))temp.add(old.getText());
+        if (temp.size()== 0)temp.add(classic.getText());
+        return temp;
+
+
+    }
+
 }
