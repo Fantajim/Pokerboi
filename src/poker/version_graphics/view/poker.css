@@ -1,6 +1,6 @@
 .menu {
 -fx-padding: 1 1 1 1;
--fx-font-size: 9px;
+-fx-font-size: 12px;
 }
 
 .label {
@@ -24,7 +24,7 @@
     -fx-padding: 5.0px;
     -fx-border-color: black;
     -fx-border-width: 2.0px;
-    -fx-min-height: 100;
+    -fx-min-height: 50;
     -fx-alignment:bottom-left;
 }
 
@@ -53,8 +53,4 @@
 -fx-min-height:100;
 
 
-}
-
-#menulabel {
--fx-font-size: 50pt;
 }

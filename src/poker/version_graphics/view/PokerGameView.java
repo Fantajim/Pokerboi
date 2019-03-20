@@ -49,8 +49,7 @@ public class PokerGameView {
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
-			getPlayers().getChildren().add(pp);
-			ppArrayList.add(pp);
+			players.getChildren().add(pp);
 		}
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
 		BorderPane root = new BorderPane(); // Put players and controls into a BorderPane
@@ -74,15 +73,9 @@ public class PokerGameView {
         stage.setTitle("Poker Project");
         stage.setScene(scene);
         stage.show();
-
-
-//test
-
 	}
 
 	public void createGame(){
-
-
 
 		getStage().close();
 		getStage().setTitle("Pokerbooooi");
@@ -90,8 +83,6 @@ public class PokerGameView {
 		getStage().show();
 
 		}
-
-
 
 	public PlayerPane getPlayerPane(int i) {
 		return (PlayerPane) players.getChildren().get(i);
