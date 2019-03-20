@@ -14,7 +14,6 @@ import poker.version_graphics.model.PokerGameModel;
 
 import java.awt.*;
 import java.awt.Menu;
-import java.util.ArrayList;
 
 
 public class PokerGameView {
@@ -26,7 +25,6 @@ public class PokerGameView {
 	private Optionbar options;
 	private Scene scene;
 	private PlayerPane pp;
-	private ArrayList<PlayerPane> ppArrayList = new ArrayList<>();
 
 
 	
@@ -38,7 +36,6 @@ public class PokerGameView {
 		this.scene = scene;
 		this.players = players;
 		this.pp = pp;
-		this.ppArrayList = ppArrayList;
 
 		options = new Optionbar();
 		controls = new ControlArea();
@@ -116,9 +113,6 @@ public class PokerGameView {
 	}
 	public Stage getStage(){
 		return stage;
-	}
-	public ArrayList<PlayerPane> getArrayPp () {
-		return ppArrayList;
 	}
 	public FlowPane getPlayers() {
 		return players;
