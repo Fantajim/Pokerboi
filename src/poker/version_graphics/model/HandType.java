@@ -1,16 +1,20 @@
 package poker.version_graphics.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public enum HandType {
     HighCard, OnePair, TwoPair, ThreeOfAKind, Straight, Flush, FullHouse, FourOfAKind, StraightFlush;
-
+    static boolean flushFound = false;
+    static boolean straightFound = false;
     /**
      * Determine the value of this hand. Note that this does not
      * account for any tie-breaking
      */
     public static HandType evaluateHand(ArrayList<Card> cards) {
         HandType currentEval = HighCard;
+
 
         if (isOnePair(cards)) currentEval = OnePair;
         if (isTwoPair(cards)) currentEval = TwoPair;
@@ -69,7 +73,26 @@ public enum HandType {
 
     public static boolean isStraight (ArrayList < Card > cards) {
         // TODO
-        return false;
+        boolean straightFound = false;
+        int count = 0;
+        ArrayList <Card> clonedCards = (ArrayList<Card>) cards.clone();
+
+        clonedCards.sort(Comparator.comparing(Card::getRank));
+        for (int i = 0; i < clonedCards.size()-1; i++) {
+            if (clonedCards.get(i).getRank().compareTo(clonedCards.get(i + 1).getRank()) == -1) {
+                count++;
+                if (count == 4) {
+                    straightFound = true;
+                }
+            }
+        }
+            if (clonedCards.get(4).getRank() == Card.Rank.Ace && straightFound == false) {
+                if(clonedCards.get(4).getRank() == Card.Rank.Ace && clonedCards.get(0).getRank() == Card.Rank.Two &&
+                clonedCards.get(1).getRank() == Card.Rank.Three && clonedCards.get(2).getRank() == Card.Rank.Four &&
+                clonedCards.get(3).getRank() == Card.Rank.Five) straightFound = true;
+            }
+
+        return straightFound;
     }
 
     public static boolean isFlush (ArrayList < Card > cards) {
@@ -129,13 +152,14 @@ public enum HandType {
             }
         }
         return fourFound;
-//skrt
+
 
 
     }
 
     public static boolean isStraightFlush (ArrayList < Card > cards) {
-        // TODO
-        return false;
+        boolean straightFlushFound = false;
+        if (straightFound && flushFound == true)straightFlushFound = true;
+        return straightFlushFound;
+        }
     }
-}
