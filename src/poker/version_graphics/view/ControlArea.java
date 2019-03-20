@@ -30,7 +30,7 @@ public class ControlArea extends HBox{
         deckbox.setSpacing(10);
         deckbox.setId("deckbox");
     	this.getChildren().addAll(lblDeck,remPlayer,addPlayer, decks,deckbox, spacer, btnShuffle, btnDeal);
-        this.setMargin(deckbox, new Insets(5,0,0,-15));
+        this.setMargin(deckbox, new Insets(0,0,4,-15));
         HBox.setHgrow(spacer, Priority.ALWAYS); // Use region to absorb resizing
         this.setId("controlArea"); // Unique ID in the CSS
     }
