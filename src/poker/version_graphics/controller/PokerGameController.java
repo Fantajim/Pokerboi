@@ -93,9 +93,11 @@ public class PokerGameController {
 	private void addPlayer() {
 	if (PokerGame.NUM_PLAYERS < 4){
 	model.addPlayer();
-	view.getPlayers().getChildren().add(view.getArrayPp().get(PokerGame.NUM_PLAYERS));
-	view.getArrayPp().get(PokerGame.NUM_PLAYERS).setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
-	model.getPlayer(PokerGame.NUM_PLAYERS).discardHand();
+	PlayerPane pp = new PlayerPane();
+	view.getArrayPp().add(pp);
+	pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
+	view.getPlayers().getChildren().add(pp);
+	view.getArrayPp().add(pp);
 	view.getArrayPp().get(PokerGame.NUM_PLAYERS).updatePlayerDisplay();
 	PokerGame.NUM_PLAYERS++;
 	 }
@@ -110,7 +112,8 @@ public class PokerGameController {
 	private void remPlayer() {
 	if (PokerGame.NUM_PLAYERS > 1){
 	model.remPlayer();
-	view.getPlayers().getChildren().remove(view.getArrayPp().get(PokerGame.NUM_PLAYERS-1));
+	view.getArrayPp().remove(PokerGame.NUM_PLAYERS-1);
+	view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS-1);
 	PokerGame.NUM_PLAYERS--;
 	}
 	else {

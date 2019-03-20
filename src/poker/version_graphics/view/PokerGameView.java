@@ -62,6 +62,7 @@ public class PokerGameView {
 		double height = screensize.getHeight();
 		stage.setResizable(false); // Disallow resizing - which is difficult to get right with images
 		players.setPrefSize(width,height/2);
+		players.setMinSize(800,500);
 		players.setMaxSize(1200,500);
 		players.setAlignment(Pos.CENTER);
 		players.setHgap(20);
@@ -131,4 +132,5 @@ public class PokerGameView {
 	public FlowPane getPlayers() {
 		return players;
 	}
+	public PlayerPane getPp() { return pp; }
 }
