@@ -15,7 +15,6 @@ public enum HandType {
     public static HandType evaluateHand(ArrayList<Card> cards) {
         HandType currentEval = HighCard;
 
-
         if (isOnePair(cards)) currentEval = OnePair;
         if (isTwoPair(cards)) currentEval = TwoPair;
         if (isThreeOfAKind(cards)) currentEval = ThreeOfAKind;
@@ -76,10 +75,9 @@ public enum HandType {
         boolean straightFound = false;
         int count = 0;
         ArrayList <Card> clonedCards = (ArrayList<Card>) cards.clone();
-
         clonedCards.sort(Comparator.comparing(Card::getRank));
         for (int i = 0; i < clonedCards.size()-1; i++) {
-            if (clonedCards.get(i).getRank().compareTo(clonedCards.get(i + 1).getRank()) == -1) {
+            if (clonedCards.get(i).getRank().ordinal()+1 == clonedCards.get(i+1).getRank().ordinal()) {
                 count++;
                 if (count == 4) {
                     straightFound = true;

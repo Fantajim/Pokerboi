@@ -67,7 +67,7 @@ public class HandTypeTest {
 			{ "2H", "3H", "4H", "5H", "AH" }
 
 	};
-	private static String[][] straightflush = { // if flush and straight are successful, this also is
+	private static String[][] straightflush = {
 												// for test purposes there are two static variables in Handtype
 												// that can be set to "true" since the straightflush method
 												// depends on these previous methods
