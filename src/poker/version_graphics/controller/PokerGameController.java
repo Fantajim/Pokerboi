@@ -79,7 +79,7 @@ public class PokerGameController {
             alert.showAndWait();
 
     	}
-		model.getPlayer(0).compareTo(model.getPlayer(1));
+		//model.getPlayer(0).compareTo(model.getPlayer(1));
 		//Todo
     }
 
