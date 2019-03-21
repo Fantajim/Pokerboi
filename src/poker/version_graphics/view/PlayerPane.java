@@ -42,6 +42,7 @@ public class PlayerPane extends VBox {
     	for (int i = 0; i < Player.HAND_SIZE; i++) {
     		Card card = null;
     		if (player.getCards().size() > i) card = player.getCards().get(i);
+
     		CardLabel cl = (CardLabel) hboxCards.getChildren().get(i);
     		cl.setCard(card);
     		HandType evaluation = player.evaluateHand();
