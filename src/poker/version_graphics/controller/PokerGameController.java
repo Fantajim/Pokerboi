@@ -61,6 +61,7 @@ public class PokerGameController {
         		PlayerPane pp = view.getPlayerPane(i);
         		pp.updatePlayerDisplay();
         	}
+
     	}
     	else if (view.getShuffleButton().isDisable() == true){
     		if (trigger == false) {
@@ -78,6 +79,8 @@ public class PokerGameController {
             alert.showAndWait();
 
     	}
+		model.getPlayer(0).compareTo(model.getPlayer(1));
+		//Todo
     }
 
 	private void autoshuffle(){
