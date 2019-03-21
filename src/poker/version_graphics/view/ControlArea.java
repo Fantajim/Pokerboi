@@ -1,9 +1,12 @@
 package poker.version_graphics.view;
 
 import javafx.geometry.Insets;
+import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
@@ -26,10 +29,20 @@ public class ControlArea extends HBox{
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!
+
+        ImageView imgview = new ImageView();
+        Image image = new Image(this.getClass().getClassLoader().getResourceAsStream("poker/images/2_of_clubs.png"));
+        Group group = new Group();
+        imgview.setImage(image);
+        group.getChildren().add(imgview);
+        imgview.setFitHeight(100);
+        imgview.setFitWidth(80);
+
+
         HBox deckbox = new HBox(classic,dog,old);
         deckbox.setSpacing(10);
         deckbox.setId("deckbox");
-    	this.getChildren().addAll(lblDeck,remPlayer,addPlayer, decks,deckbox, spacer, btnShuffle, btnDeal);
+    	this.getChildren().addAll(lblDeck, group,remPlayer,addPlayer, decks,deckbox, spacer, btnShuffle, btnDeal);
         this.setMargin(deckbox, new Insets(0,0,4,-15));
         HBox.setHgrow(spacer, Priority.ALWAYS); // Use region to absorb resizing
         this.setId("controlArea"); // Unique ID in the CSS

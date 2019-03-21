@@ -2,10 +2,13 @@ package poker.version_graphics.view;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -40,6 +43,8 @@ public class PokerGameView {
 		options = new Optionbar();
 		controls = new ControlArea();
 
+
+
 		// Create all of the player panes we need, and put them into an HBox
 
 		players = new FlowPane();
@@ -70,6 +75,13 @@ public class PokerGameView {
         stage.setTitle("Poker Project");
         stage.setScene(scene);
         stage.show();
+
+
+
+
+
+
+
 	}
 
 	public void createGame(){
