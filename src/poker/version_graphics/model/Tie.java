@@ -14,5 +14,14 @@ public class Tie {
         return one;
     }
 
+    public static ArrayList<Card> findTie (ArrayList<Card> tieList){
+
+
+
+
+
+        return tieList;
+    }
+
 
 }
