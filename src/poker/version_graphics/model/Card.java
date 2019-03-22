@@ -1,5 +1,6 @@
 package poker.version_graphics.model;
 
+
 public class Card {
     public enum Suit { Clubs, Diamonds, Hearts, Spades;
         @Override
@@ -33,7 +34,8 @@ public class Card {
             return str;
         }
     };
-    
+
+
     private final Suit suit;
     private final Rank rank;
     
@@ -49,7 +51,7 @@ public class Card {
     public Rank getRank() {
         return rank;
     }
-    
+
     @Override
     public String toString() {
         return rank.toString() + suit.toString();
