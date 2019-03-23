@@ -68,9 +68,6 @@ public class HandTypeTest {
 
 	};
 	private static String[][] straightflush = {
-												// for test purposes there are two static variables in Handtype
-												// that can be set to "true" since the straightflush method
-												// depends on these previous methods
 			{ "2S", "3S", "4S", "5S", "6S" },
 			{ "JH", "QH", "KH", "AH", "TH" },
 			{ "AD", "2D", "3D", "4D", "5D" },

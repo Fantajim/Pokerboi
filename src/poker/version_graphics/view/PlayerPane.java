@@ -4,9 +4,12 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import poker.version_graphics.PokerGame;
 import poker.version_graphics.model.Card;
 import poker.version_graphics.model.HandType;
 import poker.version_graphics.model.Player;
+
+import java.awt.*;
 
 public class PlayerPane extends VBox {
     private Label lblName = new Label();
@@ -21,7 +24,6 @@ public class PlayerPane extends VBox {
         super(); // Always call super-constructor first !!
         this.getStyleClass().add("player"); // CSS style class
         lblEvaluation.setId("evaluation");
-        
         // Add child nodes
         this.getChildren().addAll(lblName, hboxCards, lblEvaluation);
         
@@ -42,7 +44,6 @@ public class PlayerPane extends VBox {
     	for (int i = 0; i < Player.HAND_SIZE; i++) {
     		Card card = null;
     		if (player.getCards().size() > i) card = player.getCards().get(i);
-
     		CardLabel cl = (CardLabel) hboxCards.getChildren().get(i);
     		//TODO
             //animations
@@ -53,6 +54,10 @@ public class PlayerPane extends VBox {
     		else
     			lblEvaluation.setText("--");
     	}
+    }
+
+    public void setSize(){
+        if (PokerGame.NUM_PLAYERS>4)setPrefSize(300,200);
     }
 
     public void clearDisplay() {

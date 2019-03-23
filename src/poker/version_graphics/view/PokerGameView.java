@@ -68,6 +68,7 @@ public class PokerGameView {
 		players.setAlignment(Pos.CENTER);
 		players.setHgap(20);
 		players.setVgap(20);
+
 		players.setPadding(new Insets(10,0,10,0));
 		scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());

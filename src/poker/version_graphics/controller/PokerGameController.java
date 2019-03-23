@@ -100,6 +100,7 @@ public class PokerGameController {
 	pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
 	view.getPlayers().getChildren().add(pp);
 	PokerGame.NUM_PLAYERS++;
+
 	 }
 	else {
 		Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (4)");
@@ -113,6 +114,7 @@ public class PokerGameController {
 	if (PokerGame.NUM_PLAYERS > 1){
 	model.remPlayer();
 	view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS-1);
+	view.getPp().updatePlayerDisplay();
 	PokerGame.NUM_PLAYERS--;
 	}
 	else {

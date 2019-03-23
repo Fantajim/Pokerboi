@@ -1,18 +1,19 @@
 package poker.version_graphics.model;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
     public enum HandType {
         HighCard, OnePair, TwoPair, ThreeOfAKind, Straight, Flush, FullHouse, FourOfAKind, StraightFlush;
-        static boolean flushFound = false;
-        static boolean straightFound = false;
 
+       //public ArrayList<String> toCheck = new ArrayList<String>();
         /**
          * Determine the value of this hand. Note that this does not
          * account for any tie-breaking
          */
+
         public static HandType evaluateHand(ArrayList<Card> cards) {
             HandType currentEval = HighCard;
 
@@ -32,7 +33,9 @@ import java.util.Comparator;
             boolean found = false;
             for (int i = 0; i < cards.size() - 1 && !found; i++) {
                 for (int j = i + 1; j < cards.size() && !found; j++) {
-                    if (cards.get(i).getRank() == cards.get(j).getRank()) found = true;
+                    if (cards.get(i).getRank() == cards.get(j).getRank()){
+                        found = true;
+                    }
                 }
             }
             return found;
@@ -77,7 +80,7 @@ import java.util.Comparator;
             int count = 0;
             ArrayList<Card> clonedCards = (ArrayList<Card>) cards.clone();
             clonedCards.sort(Comparator.comparing(Card::getRank));
-            for (int i = 0; i < clonedCards.size() - 1; i++) {
+            for (int i = 0; i < clonedCards.size() -1 ; i++) {
                 if (clonedCards.get(i).getRank().ordinal() + 1 == clonedCards.get(i + 1).getRank().ordinal()) {
                     count++;
                     if (count == 4) {
@@ -107,8 +110,6 @@ import java.util.Comparator;
                                 if (cards.get(i).getSuit() == cards.get(j).getSuit() && cards.get(i).getSuit() == cards.get(k).getSuit()
                                         && cards.get(i).getSuit() == cards.get(l).getSuit() && cards.get(i).getSuit() == cards.get(m).getSuit()) {
                                     flushFound = true;
-                                    for (int x = 0; x < cards.size(); x++) {
-                                    }
                                 }
                             }
                         }
@@ -158,8 +159,15 @@ import java.util.Comparator;
 
         public static boolean isStraightFlush(ArrayList<Card> cards) {
             boolean straightFlushFound = false;
-            if (straightFound && flushFound == true) straightFlushFound = true;
+            if (isStraight(cards) && isFlush(cards) == true) straightFlushFound = true;
             return straightFlushFound;
+        }
+
+        public static String isHighest(ArrayList<String> tocheck){
+            String highest = "";
+
+
+            return highest;
         }
     }
 
