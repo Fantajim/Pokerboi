@@ -3,6 +3,7 @@ package poker.version_graphics.view;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import poker.version_graphics.model.HandType;
 
 public class Optionbar extends MenuBar {
 
@@ -13,7 +14,6 @@ public Optionbar(){
 
     options.getItems().add(autoshuffle);
     this.getMenus().add(options);
-
 
 
 }
