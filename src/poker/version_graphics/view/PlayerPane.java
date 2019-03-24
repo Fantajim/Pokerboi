@@ -1,9 +1,9 @@
 package poker.version_graphics.view;
 
 import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import poker.version_graphics.PokerGame;
 import poker.version_graphics.model.Card;
 import poker.version_graphics.model.HandType;
@@ -24,6 +24,14 @@ public class PlayerPane extends VBox {
         super(); // Always call super-constructor first !!
         this.getStyleClass().add("player"); // CSS style class
         lblEvaluation.setId("evaluation");
+
+        //Background
+        Image bg3 = new Image(getClass().getClassLoader().getResourceAsStream("poker/images/background/bg3.jpg"));
+        BackgroundImage	background3 = new BackgroundImage(bg3, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+
+        this.setBackground(new Background(background3));
+
+
         // Add child nodes
         this.getChildren().addAll(lblName, hboxCards, lblEvaluation);
         
@@ -64,6 +72,5 @@ public class PlayerPane extends VBox {
     cl.setCard(null);
 
     }
-
 
 }
