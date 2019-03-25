@@ -40,6 +40,8 @@ public class Card {
 
     private final Suit suit;
     private final Rank rank;
+    private boolean combo = false;
+    private HandType combotype;
     
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
@@ -59,4 +61,16 @@ public class Card {
     public String toString() {
         return rank.toString() + suit.toString();
     }
+
+    public void setCombo(boolean combo) {
+        this.combo = combo;
+    }
+
+    public boolean getCombo() {
+        return combo;
+    }
+
+    /* public int compareTo(Card o) {
+        return this.compareTo(o);
+    }*/
 }
