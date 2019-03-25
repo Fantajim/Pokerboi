@@ -8,13 +8,16 @@ import java.util.Comparator;
     public enum HandType {
         HighCard, OnePair, TwoPair, ThreeOfAKind, Straight, Flush, FullHouse, FourOfAKind, StraightFlush;
 
-       //public ArrayList<String> toCheck = new ArrayList<String>();
+
         /**
          * Determine the value of this hand. Note that this does not
          * account for any tie-breaking
          */
 
+
         public static HandType evaluateHand(ArrayList<Card> cards) {
+
+
             HandType currentEval = HighCard;
 
             if (isOnePair(cards)) currentEval = OnePair;
@@ -35,6 +38,9 @@ import java.util.Comparator;
                 for (int j = i + 1; j < cards.size() && !found; j++) {
                     if (cards.get(i).getRank() == cards.get(j).getRank()){
                         found = true;
+                        for(Card c:cards){
+                            if (cards.get(i) == c || cards.get(j) == c)c.setCombo(true);
+                        }
                     }
                 }
             }
@@ -51,6 +57,9 @@ import java.util.Comparator;
                 for (int j = i + 1; j < clonedCards.size() && !firstPairFound; j++) {
                     if (clonedCards.get(i).getRank() == clonedCards.get(j).getRank()) {
                         firstPairFound = true;
+                        for(Card c:cards){
+                            if (clonedCards.get(i) == c || clonedCards.get(j) == c)c.setCombo(true);
+                        }
                         clonedCards.remove(j);  // Remove the later card
                         clonedCards.remove(i);  // Before the earlier one
                     }
@@ -66,8 +75,12 @@ import java.util.Comparator;
             for (int i = 0; i < cards.size() - 2 && !threeFound; i++) {
                 for (int j = i + 1; j < cards.size() - 1 && !threeFound; j++) {
                     for (int k = j + 1; k < cards.size() && !threeFound; k++) {
-                        if (cards.get(i).getRank() == cards.get(j).getRank() && cards.get(i).getRank() == cards.get(k).getRank())
+                        if (cards.get(i).getRank() == cards.get(j).getRank() && cards.get(i).getRank() == cards.get(k).getRank()) {
                             threeFound = true;
+                            for (Card c : cards) {
+                                if (cards.get(i) == c || cards.get(j) == c || cards.get(k) == c) c.setCombo(true);
+                            }
+                        }
                     }
                 }
             }
@@ -127,11 +140,16 @@ import java.util.Comparator;
             for (int i = 0; i < clonedCards.size() - 2 && !firstThreeFound; i++) {
                 for (int j = i + 1; j < clonedCards.size() - 1 && !firstThreeFound; j++) {
                     for (int k = j + 1; k < clonedCards.size() && !firstThreeFound; k++) {
-                        if (clonedCards.get(i).getRank() == clonedCards.get(j).getRank() && clonedCards.get(i).getRank() == clonedCards.get(k).getRank())
+                        if (clonedCards.get(i).getRank() == clonedCards.get(j).getRank() && clonedCards.get(i).getRank() == clonedCards.get(k).getRank()) {
                             firstThreeFound = true;
-                        clonedCards.remove(k);  // Remove the later card
-                        clonedCards.remove(j);  // Before the earlier one
-                        clonedCards.remove(i);  // Even earlier
+                            for (Card c : cards) {
+                                if (clonedCards.get(i) == c || clonedCards.get(j) == c || clonedCards.get(k) == c)
+                                    c.setCombo(true);
+                            }
+                            clonedCards.remove(k);  // Remove the later card
+                            clonedCards.remove(j);  // Before the earlier one
+                            clonedCards.remove(i);  // Even earlier
+                        }
                     }
                 }
             }
@@ -148,6 +166,9 @@ import java.util.Comparator;
                         for (int l = k + 1; l < cards.size() && !fourFound; l++)
                             if (cards.get(i).getRank() == cards.get(j).getRank() && cards.get(i).getRank() == cards.get(k).getRank() && cards.get(i).getRank() == cards.get(l).getRank()) {
                                 fourFound = true;
+                                for(Card c:cards){
+                                    if (cards.get(i) == c || cards.get(j) == c || cards.get(k) == c || cards.get(l)== c )c.setCombo(true);
+                                }
                             }
                     }
                 }
@@ -169,6 +190,8 @@ import java.util.Comparator;
 
             return highest;
         }
+
+
     }
 
 
