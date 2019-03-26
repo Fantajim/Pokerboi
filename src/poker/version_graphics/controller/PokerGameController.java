@@ -61,8 +61,7 @@ public class PokerGameController {
 				pp.updatePlayerDisplay();
 			}
 			playerwinner = tieFind();
-			Alert winner = new Alert(AlertType.INFORMATION, "Winner is: " + playerwinner);
-			winner.show();
+            view.getResult().setText(playerwinner);
 
 		} else if (view.getShuffleButton().isDisable() == true) {
 			if (trigger == false) {
@@ -78,8 +77,6 @@ public class PokerGameController {
 			alert.showAndWait();
 
 		}
-		//Todo
-
 	}
 
 	private void autoshuffle() {
@@ -145,9 +142,9 @@ public class PokerGameController {
 		          players.remove(x);
               }
         }
-
+        win = "Winner is: ";
 		for (Player p : players) {
-			win = win.concat(" " + p.getPlayerName());
+			win = win.concat(p.getPlayerName());
 		}
 		return win;
 	}
