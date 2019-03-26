@@ -2,6 +2,7 @@ package poker.version_graphics.model;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Tie {
@@ -16,18 +17,47 @@ int result = 99;
 
 switch (player1.getHandType()) {
 
-    //TODO
-    //Straight with Ace,2,3,4,5 < 10,j,q,k,Ace
+
             case FullHouse: {
-                hand1Combo = fullHouseSort(player1.getCards());
+                hand1Combo = fullHouseSort(player1.getCards()); //Sort FullHouse so that triples are always in the back of the list
                 hand2Combo = fullHouseSort(player2.getCards());
                 break;
+            }
+
+            case Straight: {
+                for (Card c : player1.getCards())
+                {
+                    hand1Combo.add(c);
+                }
+                hand1Combo.sort(Comparator.comparing(Card::getRank));
+                if(hand1Combo.get(0).getRank() == Card.Rank.Two && //Check if low Straight
+                hand1Combo.get(1).getRank() == Card.Rank.Three &&
+                hand1Combo.get(2).getRank() == Card.Rank.Four &&
+                hand1Combo.get(3).getRank() == Card.Rank.Five &&
+                hand1Combo.get(4).getRank() == Card.Rank.Ace){
+                    Collections.rotate(hand1Combo,1); //Put Ace at first position
+                }
+
+                for (Card c : player2.getCards()) //add cards from player2
+                {
+                    hand2Combo.add(c);
+                }
+                hand2Combo.sort(Comparator.comparing(Card::getRank));
+                if(hand2Combo.get(0).getRank() == Card.Rank.Two && //check if low Straight
+                        hand2Combo.get(1).getRank() == Card.Rank.Three &&
+                        hand2Combo.get(2).getRank() == Card.Rank.Four &&
+                        hand2Combo.get(3).getRank() == Card.Rank.Five &&
+                        hand2Combo.get(4).getRank() == Card.Rank.Ace){
+                    Collections.rotate(hand2Combo,1); //Put Ace at first position
+                }
+                break;
+
             }
             default: {
 
                 for (Card c : player1.getCards())
                 {
-                    if (c.getCombo() == true ) hand1Combo.add(c);
+                    if (c.getCombo() == true ) hand1Combo.add(c); //add cards from players
                     if (c.getCombo() == false) hand1High.add(c);
                 }
                 for (Card c : player2.getCards())
@@ -45,7 +75,7 @@ switch (player1.getHandType()) {
 }
 
 
-            if (hand1High.size() == 5){
+            if (hand1High.size() == 5){ //Check the hands that dont have a combination against each other starting from the end
                 int highCounter = hand1High.size() - 1;
                 while (result == 99) {
                     if (hand1High.get(highCounter).getRank().ordinal() > hand2High.get(highCounter).getRank().ordinal()) {
@@ -66,7 +96,13 @@ switch (player1.getHandType()) {
             }
             else {
                 int comboCounter = hand1Combo.size() - 1;
-                int highCounter = hand1High.size() - 1;
+                int highCounter;
+               if(hand1High.size() > 0 && hand2High.size() > 0) {
+                   highCounter = hand1High.size() - 1;
+               }
+               else {
+                    highCounter = 0; //Check the hands that have a combination against each other starting from the end
+               }
                 while (result == 99) {
                     if (hand1Combo.get(comboCounter).getRank().ordinal() > hand2Combo.get(comboCounter).getRank().ordinal()) {
                         result = 1;
@@ -77,7 +113,7 @@ switch (player1.getHandType()) {
                     if (hand1Combo.get(comboCounter).getRank().ordinal() == hand2Combo.get(comboCounter).getRank().ordinal()) {
 
                         if (comboCounter == 0) {
-                            if (highCounter >= 0){
+
                                 if (hand1High.get(highCounter).getRank().ordinal() > hand2High.get(highCounter).getRank().ordinal()) {
                                     result = 1;
                                     break;
@@ -91,11 +127,10 @@ switch (player1.getHandType()) {
                                         result = 100;
                                     }
                                 }
-                                highCounter--;
-
-                            }
-
+                        if (highCounter == 0) {
                             result = 100;
+                            }
+                            highCounter--;
                         }
                     }
                     comboCounter--;

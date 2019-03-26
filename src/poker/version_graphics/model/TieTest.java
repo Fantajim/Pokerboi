@@ -23,6 +23,18 @@ public class TieTest {
             { "AC", "AD", "AH", "5C", "5D" }; //winner
     private static String[] p2FullHouse =
             { "KC", "KD", "KH", "8C", "8D" }; //looser
+    private static String[] p1Fours =
+            { "AC", "AD", "AH", "5C", "AS" }; //winner
+    private static String[] p2Fours =
+            { "KC", "KD", "KH", "KS", "8D" }; //looser
+    private static String[] p1Straight =
+            { "TC", "JD", "QH", "KC", "AS" }; //winner
+    private static String[] p2Straight =
+            { "AC", "2S", "3H", "4C", "5D" }; //looser
+    private static String[] p1StraightLow =
+            { "3C", "4D", "5H", "6C", "7S" }; //winner
+    private static String[] p2StraightLow =
+            { "AC", "2S", "3H", "4C", "5D" }; //looser
 
     ArrayList<Card> p1highCardHands;
     ArrayList<Card> p2highCardHands;
@@ -30,8 +42,15 @@ public class TieTest {
     ArrayList<Card> p2DoublePairHands;
     ArrayList<Card> p1FullHouseHands;
     ArrayList<Card> p2FullHouseHands;
+    ArrayList<Card> p1FourHands;
+    ArrayList<Card> p2FourHands;
+    ArrayList<Card> p1StraightHands;
+    ArrayList<Card> p2StraightHands;
+    ArrayList<Card> p1StraightHandsLow;
+    ArrayList<Card> p2StraightHandsLow;
     Player p1 = new Player("Testplayer1");
     Player p2 = new Player("Testplayer2");
+
     @Before
     public void makeHands() {
         p1highCardHands = makeHand(p1HighCard);
@@ -40,8 +59,13 @@ public class TieTest {
         p2DoublePairHands = makeHand(p2DoublePair);
         p1FullHouseHands = makeHand(p1FullHouse);
         p2FullHouseHands = makeHand(p2FullHouse);
+        p1FourHands = makeHand(p1Fours);
+        p2FourHands = makeHand (p2Fours);
+        p1StraightHands = makeHand(p1Straight);
+        p2StraightHands = makeHand(p2Straight);
+        p1StraightHandsLow = makeHand(p1StraightLow);
+        p2StraightHandsLow = makeHand(p2StraightLow);
     }
-    //player1
 
     @Test
     public void testHighCard() {
@@ -53,8 +77,7 @@ public class TieTest {
         }
         p1.evaluateHand();
         p2.evaluateHand();
-        int test1;
-        test1 = Tie.findWinner(p1,p2);
+        int test1 = Tie.findWinner(p1,p2);
       assertEquals(test1,1); //p1 winner
     }
 
@@ -68,9 +91,8 @@ public class TieTest {
         }
         p1.evaluateHand();
         p2.evaluateHand();
-        int test1;
-        test1 = Tie.findWinner(p1,p2);
-        assertEquals(test1,-1); //p1 winner
+       int test1 = Tie.findWinner(p1,p2);
+        assertEquals(test1,-1); //p2 winner
     }
 
     @Test
@@ -83,14 +105,52 @@ public class TieTest {
         }
         p1.evaluateHand();
         p2.evaluateHand();
-        int test1;
-        test1 = Tie.findWinner(p1,p2);
+        int test1 = Tie.findWinner(p1,p2);
+        assertEquals(test1,1); //p1 winner
+    }
+
+    @Test
+    public void testFours() {
+        for(Card c:p1FourHands){
+            p1.addCard(c);
+        }
+        for (Card c :p2FourHands){
+            p2.addCard(c);
+        }
+        p1.evaluateHand();
+        p2.evaluateHand();
+        int test1 = Tie.findWinner(p1,p2);
+        assertEquals(test1,1); //p1 winner
+    }
+
+    @Test
+    public void testStraight() {
+        for(Card c:p1StraightHands){
+            p1.addCard(c);
+        }
+        for (Card c :p2StraightHands){
+            p2.addCard(c);
+        }
+        p1.evaluateHand();
+        p2.evaluateHand();
+        int test1 = Tie.findWinner(p1,p2);
         assertEquals(test1,1); //p1 winner
     }
 
 
-
-
+    @Test
+    public void testStraightLow() {
+        for(Card c:p1StraightHandsLow){
+            p1.addCard(c);
+        }
+        for (Card c :p2StraightHandsLow){
+            p2.addCard(c);
+        }
+        p1.evaluateHand();
+        p2.evaluateHand();
+        int test1 = Tie.findWinner(p1,p2);
+        assertEquals(test1,1); //p1 winner
+    }
 
     /**
      * Make a hand (ArrayList<Card>) from an array of 5 strings
@@ -129,5 +189,4 @@ public class TieTest {
 
         return new Card(suit, rank);
     }
-
 }
