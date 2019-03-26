@@ -6,6 +6,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -131,4 +132,5 @@ public class PokerGameView {
 		return players;
 	}
 	public PlayerPane getPp() { return pp; }
+	public Label getResult() {return controls.result;}
 }
