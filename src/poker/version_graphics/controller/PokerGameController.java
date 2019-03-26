@@ -1,5 +1,7 @@
 package poker.version_graphics.controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import poker.version_graphics.PokerGame;
@@ -24,9 +26,16 @@ public class PokerGameController {
 		view.getDealButton().setOnAction(e -> deal());
 		view.getAddPlayer().setOnAction(event -> addPlayer());
 		view.getRemPlayer().setOnAction(event -> remPlayer());
+		view.getMusicPlay().setOnAction(event -> playMusic());
+		view.getMusicStop().setOnAction(event -> stopMusic());
+		view.getVolume().valueProperty().addListener(new ChangeListener<Number>() {
+			@Override
+			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+				view.getlobbyMusicPlayer().setVolume(view.getVolume().getValue());
+			}
+		});
+
 	}
-
-
 	/**
 	 * Remove all cards from players hands, and shuffle the deck
 	 */
@@ -117,6 +126,14 @@ public class PokerGameController {
 		}
 	}
 
+	private void playMusic(){
+		view.getlobbyMusicPlayer().play();
+	}
+
+	private void stopMusic(){
+		view.getlobbyMusicPlayer().stop();
+	}
+
 	public String tieFind() {
 		String win = "";
 		//int result;
@@ -142,7 +159,7 @@ public class PokerGameController {
 		          players.remove(x);
               }
         }
-        win = "Winner is: ";
+        win = "Winner: ";
 		for (Player p : players) {
 			win = win.concat(p.getPlayerName());
 		}
