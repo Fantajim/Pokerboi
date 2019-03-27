@@ -45,8 +45,6 @@ public class PlayerPane extends VBox {
     		Card card = null;
     		if (player.getCards().size() > i) card = player.getCards().get(i);
     		CardLabel cl = (CardLabel) hboxCards.getChildren().get(i);
-    		//TODO
-            //animations
     		cl.setCard(card);
     		HandType evaluation = player.evaluateHand();
     		if (evaluation != null)
