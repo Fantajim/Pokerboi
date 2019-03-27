@@ -1,11 +1,15 @@
 package poker.version_graphics.controller;
 
+import javafx.animation.ScaleTransition;
+import javafx.animation.SequentialTransition;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.util.Duration;
 import poker.version_graphics.PokerGame;
 import poker.version_graphics.model.*;
+import poker.version_graphics.view.CardLabel;
 import poker.version_graphics.view.PlayerPane;
 import poker.version_graphics.view.PokerGameView;
 
@@ -63,6 +67,7 @@ public class PokerGameController {
 				p.discardHand();
 				for (int j = 0; j < Player.HAND_SIZE; j++) {
 					Card card = deck.dealCard();
+					//maybe animation
 					p.addCard(card);
 				}
 				//method comparing
