@@ -1,5 +1,7 @@
 package poker.version_graphics.model;
 
+import poker.version_graphics.PokerGame;
+
 import java.util.ArrayList;
 
 public class Player implements Comparable<Player> {
@@ -8,7 +10,6 @@ public class Player implements Comparable<Player> {
     private final String playerName; // This is the ID
     private final ArrayList<Card> cards = new ArrayList<>();
     private HandType handType;
-    private Tie tie;
     
     public Player(String playerName) {
         this.playerName = playerName;
@@ -51,6 +52,13 @@ public class Player implements Comparable<Player> {
      */
     @Override
     public int compareTo(Player o) {
-        return handType.compareTo(o.handType);
+       return handType.compareTo(o.handType);
     }
+
+    public HandType getHandType(){
+        return handType;
+    }
+
+
+
 }

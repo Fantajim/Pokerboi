@@ -6,10 +6,12 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import poker.version_graphics.PokerGame;
@@ -83,7 +85,7 @@ public class PokerGameView {
 		double height = screensize.getHeight();
 		stage.setResizable(false); // Disallow resizing - which is difficult to get right with images
 		players.setPrefSize(width,height/2);
-		players.setMinSize(800,500);
+		players.setMinSize(850,500);
 		players.setMaxSize(1200,500);
 		players.setAlignment(Pos.CENTER);
 		players.setHgap(20);
@@ -96,13 +98,6 @@ public class PokerGameView {
         stage.setTitle("Poker Project");
         stage.setScene(scene);
         stage.show();
-
-
-
-
-
-
-
 
 	}
 
@@ -152,4 +147,9 @@ public class PokerGameView {
 		return players;
 	}
 	public PlayerPane getPp() { return pp; }
+	public Label getResult() {return controls.result;}
+	public Button getMusicPlay(){return controls.musicPlay;}
+	public Button getMusicStop(){return controls.musicStop;}
+	public MediaPlayer getlobbyMusicPlayer(){return controls.lobbyMusicPlayer;}
+	public Slider getVolume(){return controls.volume;}
 }

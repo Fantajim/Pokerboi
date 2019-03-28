@@ -24,8 +24,13 @@
     -fx-padding: 5.0px;
     -fx-border-color: black;
     -fx-border-width: 2.0px;
-    -fx-min-height: 150;
+    -fx-min-height: 100;
     -fx-alignment:bottom-left;
+}
+
+#controlBox {
+    -fx-spacing: 15.0px;
+    -fx-padding: 5.0px;
 }
 
 .player {
@@ -43,7 +48,7 @@
     -fx-border-width: 1.0px;
 	-fx-background-color: white;
     -fx-min-width: 50;
-    -fx-pref-width: 111;
+    -fx-pref-width: 113;
     -fx-max-width: 500;
     -fx-min-height: 80;
     -fx-pref-height: 162;

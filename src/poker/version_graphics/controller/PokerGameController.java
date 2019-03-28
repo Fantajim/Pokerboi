@@ -1,126 +1,173 @@
 package poker.version_graphics.controller;
 
+import javafx.animation.ScaleTransition;
+import javafx.animation.SequentialTransition;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.util.Duration;
 import poker.version_graphics.PokerGame;
-import poker.version_graphics.model.Card;
-import poker.version_graphics.model.DeckOfCards;
-import poker.version_graphics.model.Player;
-import poker.version_graphics.model.PokerGameModel;
+import poker.version_graphics.model.*;
+import poker.version_graphics.view.CardLabel;
 import poker.version_graphics.view.PlayerPane;
 import poker.version_graphics.view.PokerGameView;
+
+import java.util.ArrayList;
 
 public class PokerGameController {
 	private PokerGameModel model;
 	private PokerGameView view;
 	private Boolean on;
 	private Boolean trigger = false;
-	
+
 	public PokerGameController(PokerGameModel model, PokerGameView view) {
 		this.model = model;
 		this.view = view;
 		this.on = on;
 		view.getAutoshuffle().setOnAction(event -> autoshuffle());
-		view.getShuffleButton().setOnAction( e -> shuffle() );
-		view.getDealButton().setOnAction( e -> deal() );
-		view.getAddPlayer().setOnAction(event -> addPlayer() );
+		view.getShuffleButton().setOnAction(e -> shuffle());
+		view.getDealButton().setOnAction(e -> deal());
+		view.getAddPlayer().setOnAction(event -> addPlayer());
 		view.getRemPlayer().setOnAction(event -> remPlayer());
+		view.getMusicPlay().setOnAction(event -> playMusic());
+		view.getMusicStop().setOnAction(event -> stopMusic());
+		view.getVolume().valueProperty().addListener(new ChangeListener<Number>() {
+			@Override
+			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+				view.getlobbyMusicPlayer().setVolume(view.getVolume().getValue());
+			}
+		});
+
 	}
-	
+	/**
+	 * Remove all cards from players hands, and shuffle the deck
+	 */
+	private void shuffle() {
+		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+			Player p = model.getPlayer(i);
+			p.discardHand();
+			PlayerPane pp = view.getPlayerPane(i);
+			pp.updatePlayerDisplay();
+		}
 
+		model.getDeck().shuffle();
+	}
 
-    /**
-     * Remove all cards from players hands, and shuffle the deck
-     */
-    private void shuffle() {
-    	for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-    		Player p = model.getPlayer(i);
-    		p.discardHand();
-    		PlayerPane pp = view.getPlayerPane(i);
-    		pp.updatePlayerDisplay();
-    	}
+	/**
+	 * Deal each player five cards, then evaluate the two hands
+	 */
+	private void deal() {
+		String playerwinner = "test";
+		int cardsRequired = PokerGame.NUM_PLAYERS * Player.HAND_SIZE;
+		DeckOfCards deck = model.getDeck();
+		if (cardsRequired <= deck.getCardsRemaining()) {
+			for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+				Player p = model.getPlayer(i);
+				p.discardHand();
+				for (int j = 0; j < Player.HAND_SIZE; j++) {
+					Card card = deck.dealCard();
+					//maybe animation
+					p.addCard(card);
+				}
+				//method comparing
+				PlayerPane pp = view.getPlayerPane(i);
+				pp.updatePlayerDisplay();
+			}
+			playerwinner = tieFind();
+            view.getResult().setText(playerwinner);
 
-    	model.getDeck().shuffle();
-    }
-    
-    /**
-     * Deal each player five cards, then evaluate the two hands
-     */
-    private void deal() {
-    	int cardsRequired = PokerGame.NUM_PLAYERS * Player.HAND_SIZE;
-    	DeckOfCards deck = model.getDeck();
-    	if (cardsRequired <= deck.getCardsRemaining()) {
-        	for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
-        		Player p = model.getPlayer(i);
-        		p.discardHand();
-        		for (int j = 0; j < Player.HAND_SIZE; j++) {
-        			Card card = deck.dealCard();
-        			p.addCard(card);
-        		}
-        		p.evaluateHand();
-        		PlayerPane pp = view.getPlayerPane(i);
-        		pp.updatePlayerDisplay();
-        	}
-
-    	}
-    	else if (view.getShuffleButton().isDisable() == true){
-    		if (trigger == false) {
+		} else if (view.getShuffleButton().isDisable() == true) {
+			if (trigger == false) {
 				view.getDealButton().setText("Shuffle");
 				trigger = !trigger;
-			}
-    		else {
+			} else {
 				shuffle();
 				view.getDealButton().setText("Deal");
 				trigger = !trigger;
 			}
+		} else {
+			Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
+			alert.showAndWait();
+
 		}
-    	else {
-            Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
-            alert.showAndWait();
-
-    	}
-		//model.getPlayer(0).compareTo(model.getPlayer(1));
-		//Todo
-    }
-
-	private void autoshuffle(){
-    view.Toggleautoshuffleview();
-    if (view.getAutoshuffle().getText() == "Autoshuffle") {
-    	view.getAutoshuffle().setText("Autoshuffle \u2713");
 	}
-    else {
-		view.getAutoshuffle().setText("Autoshuffle");
-	}
+
+	private void autoshuffle() {
+		view.Toggleautoshuffleview();
+		if (view.getAutoshuffle().getText() == "Autoshuffle") {
+			view.getAutoshuffle().setText("Autoshuffle \u2713");
+		} else {
+			view.getAutoshuffle().setText("Autoshuffle");
+		}
 	}
 
 	private void addPlayer() {
-	if (PokerGame.NUM_PLAYERS < 4){
-	model.addPlayer();
-	PlayerPane pp = new PlayerPane();
-	pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
-	view.getPlayers().getChildren().add(pp);
-	PokerGame.NUM_PLAYERS++;
+		if (PokerGame.NUM_PLAYERS < 4) {
+			model.addPlayer();
+			PlayerPane pp = new PlayerPane();
+			pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
+			view.getPlayers().getChildren().add(pp);
+			PokerGame.NUM_PLAYERS++;
 
-	 }
-	else {
-		Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (4)");
-		alert.showAndWait();
+		} else {
+			Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (4)");
+			alert.showAndWait();
 
-	}
+		}
 
 	}
 
 	private void remPlayer() {
-	if (PokerGame.NUM_PLAYERS > 1){
-	model.remPlayer();
-	view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS-1);
-	view.getPp().updatePlayerDisplay();
-	PokerGame.NUM_PLAYERS--;
-	}
-	else {
-		Alert alert = new Alert(AlertType.ERROR, "Min Player count reached (1)");
-		alert.showAndWait();
+		if (PokerGame.NUM_PLAYERS > 1) {
+			model.remPlayer();
+			view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS - 1);
+			view.getPp().updatePlayerDisplay();
+			PokerGame.NUM_PLAYERS--;
+		} else {
+			Alert alert = new Alert(AlertType.ERROR, "Min Player count reached (1)");
+			alert.showAndWait();
 
+		}
 	}
+
+	private void playMusic(){
+		view.getlobbyMusicPlayer().play();
+	}
+
+	private void stopMusic(){
+		view.getlobbyMusicPlayer().stop();
+	}
+
+	public String tieFind() {
+		String win = "";
+		//int result;
+		ArrayList<Player> players = new ArrayList<>();
+		if (PokerGame.NUM_PLAYERS > 1) for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
+			players.add(model.getPlayer(i));
+		}
+
+		int x = 0;
+		while (x< players.size()-1){
+        int result = players.get(x).compareTo(players.get(x+1));
+		  if(result==0) {
+              result = Tie.findWinner(players.get(x), players.get(x + 1));
+              if (result == 100) {
+                  x++;
+                  result = 0;
+              }
+          }
+		  if (result >=1) {
+		          players.remove(x+1);
+              }
+		  if (result < 1) {
+		          players.remove(x);
+              }
+        }
+        win = "Winner: ";
+		for (Player p : players) {
+			win = win.concat(p.getPlayerName());
+		}
+		return win;
 	}
 }

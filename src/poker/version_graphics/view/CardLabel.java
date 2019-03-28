@@ -1,9 +1,13 @@
 package poker.version_graphics.view;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
+import javafx.animation.ScaleTransition;
+import javafx.animation.SequentialTransition;
+import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.util.Duration;
 import poker.version_graphics.model.Card;
 
 import java.util.ArrayList;
@@ -26,15 +30,28 @@ public class CardLabel extends Label {
 			imv.fitWidthProperty().bind(this.widthProperty());
 			imv.fitHeightProperty().bind(this.heightProperty());
 			imv.setPreserveRatio(true);
+			Double cardWidth = this.getWidth();
 			this.setGraphic(imv);
-		} else {
-		/*	Image cardback = new Image(this.getClass().getClassLoader().getResourceAsStream("poker/images/cardback.gif"));
+			//Todo
+			//Animation
+				ScaleTransition shrink = new ScaleTransition(Duration.millis(500));
+				shrink.setToX(0);
+
+				ScaleTransition grow = new ScaleTransition(Duration.millis(500));
+				grow.setToX(1.0);
+
+				SequentialTransition sequence = new SequentialTransition(this,shrink,grow);
+				sequence.play();
+		}
+
+		else {
+			Image cardback = new Image(this.getClass().getClassLoader().getResourceAsStream("poker/images/cardback.png"));
 			ImageView imvback = new ImageView(cardback);
 			imvback.fitHeightProperty().bind(this.heightProperty());
 			imvback.fitWidthProperty().bind(this.widthProperty());
 			imvback.setPreserveRatio(true);
-			this.setGraphic(imvback);*/
-		this.setGraphic(null);
+			this.setGraphic(imvback);
+		//this.setGraphic(null);
 		}
 	}
 
