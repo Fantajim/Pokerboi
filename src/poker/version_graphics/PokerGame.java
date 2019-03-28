@@ -29,6 +29,5 @@ public class PokerGame extends Application {
     public static void setNumPlayers(String setplayers){
     	NUM_PLAYERS = Integer.valueOf(setplayers);
 	}
-
-
+//prpprrrpprprprprprpfpr
 }
