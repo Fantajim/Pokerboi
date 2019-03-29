@@ -38,7 +38,7 @@ public class ControlArea extends VBox{
     private Label decks = new Label("Card Decks: ");
     private static CheckBox classic = new CheckBox("classic");
     private static CheckBox dog = new CheckBox("dog");
-    private static CheckBox old = new CheckBox ("old");
+    private static CheckBox bird = new CheckBox ("bird");
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!
@@ -50,7 +50,7 @@ public class ControlArea extends VBox{
         lobbyMusicPlayer.setAutoPlay(false);
         lobbyMusicPlayer.setVolume(0.0);
         HBox topBox = new HBox(result);
-        HBox deckBox = new HBox(classic,dog,old);
+        HBox deckBox = new HBox(classic,dog,bird);
         HBox bottomBox = new HBox(lblDeck,remPlayer,addPlayer, decks,deckBox,mediaBox, spacer, btnShuffle, btnDeal);
         deckBox.setSpacing(10);
         deckBox.setId("deckbox");
@@ -77,7 +77,7 @@ public class ControlArea extends VBox{
         ArrayList<String>temp = new ArrayList<>();
         if ((classic.isSelected()))temp.add(classic.getText());
         if ((dog.isSelected()))temp.add(dog.getText());
-        if ((old.isSelected()))temp.add(old.getText());
+        if ((bird.isSelected()))temp.add(bird.getText());
         if (temp.size()== 0)temp.add(classic.getText());
         return temp;
 

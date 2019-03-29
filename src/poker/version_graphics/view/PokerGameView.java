@@ -16,6 +16,15 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import poker.version_graphics.PokerGame;
 import poker.version_graphics.model.PokerGameModel;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import poker.version_graphics.model.Card;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Random;
 
 import java.awt.*;
 import java.awt.Menu;
@@ -55,10 +64,21 @@ public class PokerGameView {
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
 			players.getChildren().add(pp);
 		}
+
+		//Backgrounds
+		Image bg1 = new Image(getClass().getClassLoader().getResourceAsStream("poker/images/background/bg1.jpg"));
+		BackgroundImage	background1 = new BackgroundImage(bg1, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+
+		Image bg2 = new Image(getClass().getClassLoader().getResourceAsStream("poker/images/background/bg2.jpg"));
+		BackgroundImage	background2 = new BackgroundImage(bg2, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
+
+		//Structure
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
 		BorderPane root = new BorderPane(); // Put players and controls into a BorderPane
 		root.setTop(options);
+		players.setBackground(new Background(background1));
 		root.setCenter(players);
+		controls.setBackground(new Background(background2));
 		root.setBottom(controls);
 		Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 		double width = screensize.getWidth();
