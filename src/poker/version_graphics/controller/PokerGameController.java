@@ -134,10 +134,10 @@ public class PokerGameController {
 	private void playMusic(){
 		if (view.getMusicPlay().getText() == "\u25B6")
 		{  //Play
-			view.getMusicPlay().setText("\u23F8");
+			view.getMusicPlay().setText("\u25B7");
 			view.getlobbyMusicPlayer().play();
 		}
-		else if(view.getMusicPlay().getText() == "\u23F8")
+		else if(view.getMusicPlay().getText() == "\u25B7")
 		{  //Pause
 			view.getMusicPlay().setText("\u25B6");
 			view.getlobbyMusicPlayer().pause();
