@@ -10,13 +10,11 @@ public class Optionbar extends MenuBar {
 private Menu options = new Menu("Options");
 private MenuItem fastshuffle = new MenuItem("Fastshuffle");
 
-public Optionbar(){
-
+public Optionbar()
+    {
     options.getItems().add(fastshuffle);
     this.getMenus().add(options);
-
-
-}
+    }
 
     public MenuItem getFastShuffle() {
         return fastshuffle;

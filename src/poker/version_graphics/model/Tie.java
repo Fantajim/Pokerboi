@@ -17,13 +17,13 @@ int result = 99;
 
 switch (player1.getHandType()) {
 
-
+//Sort FullHouse so that triples are always in the back of the list
             case FullHouse: {
-                hand1Combo = fullHouseSort(player1.getCards()); //Sort FullHouse so that triples are always in the back of the list
+                hand1Combo = fullHouseSort(player1.getCards());
                 hand2Combo = fullHouseSort(player2.getCards());
                 break;
             }
-
+//Handle special case of Ace,2,3,4,5 being the lowest Straight
             case Straight: {
                 for (Card c : player1.getCards())
                 {
@@ -37,7 +37,7 @@ switch (player1.getHandType()) {
                 hand1Combo.get(4).getRank() == Card.Rank.Ace){
                     Collections.rotate(hand1Combo,1); //Put Ace at first position
                 }
-
+//default combo handler
                 for (Card c : player2.getCards()) //add cards from player2
                 {
                     hand2Combo.add(c);
@@ -74,8 +74,8 @@ switch (player1.getHandType()) {
             }
 }
 
-
-            if (hand1High.size() == 5){ //Check the hands that dont have a combination against each other starting from the end
+//Check the hands that dont have a combination against each other starting from the end
+            if (hand1High.size() == 5){
                 int highCounter = hand1High.size() - 1;
                 while (result == 99) {
                     if (hand1High.get(highCounter).getRank().ordinal() > hand2High.get(highCounter).getRank().ordinal()) {
@@ -101,8 +101,9 @@ switch (player1.getHandType()) {
                    highCounter = hand1High.size() - 1;
                }
                else {
-                    highCounter = 0; //Check the hands that have a combination against each other starting from the end
+                    highCounter = 0;
                }
+                //Check the hands that have a combination against each other starting from the end
                 while (result == 99) {
                     if (hand1Combo.get(comboCounter).getRank().ordinal() > hand2Combo.get(comboCounter).getRank().ordinal()) {
                         result = 1;
@@ -112,6 +113,7 @@ switch (player1.getHandType()) {
                     }
                     if (hand1Combo.get(comboCounter).getRank().ordinal() == hand2Combo.get(comboCounter).getRank().ordinal()) {
 
+                        //If there are no more ComboCards switch to remaining HighCards to determine winner or possible real Tie
                         if (comboCounter == 0) {
 
                                 if (hand1High.get(highCounter).getRank().ordinal() > hand2High.get(highCounter).getRank().ordinal()) {
@@ -141,7 +143,7 @@ switch (player1.getHandType()) {
         }
 
 
-
+//Sorts FullHouse hands
                    public static ArrayList<Card> fullHouseSort (ArrayList < Card > cards) {
                        ArrayList<Card> clonedCards = (ArrayList<Card>) cards.clone();
                        ArrayList<Card> sortedCards = new ArrayList<Card>();

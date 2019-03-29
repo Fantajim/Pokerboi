@@ -57,7 +57,6 @@ public class PokerGameView {
 
 
 		// Create all of the player panes we need, and put them into an HBox
-
 		players = new FlowPane();
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
 			pp = new PlayerPane();
@@ -83,7 +82,7 @@ public class PokerGameView {
 		Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 		double width = screensize.getWidth();
 		double height = screensize.getHeight();
-		stage.setResizable(false); // Disallow resizing - which is difficult to get right with images
+		stage.setResizable(true); // Disallow resizing - which is difficult to get right with images
 		players.setPrefSize(width,height/2);
 		players.setMinSize(850,500);
 		players.setMaxSize(1200,500);
@@ -101,39 +100,25 @@ public class PokerGameView {
 
 	}
 
-	public void createGame(){
-
-		getStage().close();
-		getStage().setTitle("Pokerbooooi");
-		getStage().setScene(getScene());
-		getStage().show();
-
-		}
-
+	//Getters and Shuffle Toggle
 	public PlayerPane getPlayerPane(int i) {
 		return (PlayerPane) players.getChildren().get(i);
 	}
-	
 	public Button getShuffleButton() {
 		return controls.btnShuffle;
 	}
-	
 	public Button getDealButton() {
 		return controls.btnDeal;
 	}
-
 	public Button getAddPlayer() {
 		return controls.addPlayer;
 	}
-
 	public Button getRemPlayer() {
 		return controls.remPlayer;
 	}
-
 	public MenuItem getFastShuffle(){
 		return options.getFastShuffle();
 	}
-
 	public void ToggleFastShuffleview(){
 		controls.toggleFastShuffle();
 	}
