@@ -8,18 +8,18 @@ import poker.version_graphics.model.HandType;
 public class Optionbar extends MenuBar {
 
 private Menu options = new Menu("Options");
-private MenuItem autoshuffle = new MenuItem("Autoshuffle");
+private MenuItem fastshuffle = new MenuItem("Fastshuffle");
 
 public Optionbar(){
 
-    options.getItems().add(autoshuffle);
+    options.getItems().add(fastshuffle);
     this.getMenus().add(options);
 
 
 }
 
-    public MenuItem getAutoshuffle() {
-        return autoshuffle;
+    public MenuItem getFastShuffle() {
+        return fastshuffle;
     }
 
 }

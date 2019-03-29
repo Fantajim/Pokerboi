@@ -41,7 +41,6 @@ public class Card {
     private final Suit suit;
     private final Rank rank;
     private boolean combo = false;
-    private HandType combotype;
     
     public Card(Suit suit, Rank rank) {
         this.suit = suit;

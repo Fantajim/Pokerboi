@@ -25,7 +25,7 @@ public class PokerGameController {
 		this.model = model;
 		this.view = view;
 		this.on = on;
-		view.getAutoshuffle().setOnAction(event -> autoshuffle());
+		view.getFastShuffle().setOnAction(event -> fastShuffle());
 		view.getShuffleButton().setOnAction(e -> shuffle());
 		view.getDealButton().setOnAction(e -> deal());
 		view.getAddPlayer().setOnAction(event -> addPlayer());
@@ -93,12 +93,12 @@ public class PokerGameController {
 		}
 	}
 
-	private void autoshuffle() {
-		view.Toggleautoshuffleview();
-		if (view.getAutoshuffle().getText() == "Autoshuffle") {
-			view.getAutoshuffle().setText("Autoshuffle \u2713");
+	private void fastShuffle() {
+		view.ToggleFastShuffleview();
+		if (view.getFastShuffle().getText() == "Fastshuffle") {
+			view.getFastShuffle().setText("Fastshuffle \u2713");
 		} else {
-			view.getAutoshuffle().setText("Autoshuffle");
+			view.getFastShuffle().setText("Fastshuffle");
 		}
 	}
 
@@ -132,7 +132,16 @@ public class PokerGameController {
 	}
 
 	private void playMusic(){
-		view.getlobbyMusicPlayer().play();
+		if (view.getMusicPlay().getText() == "\u25B6")
+		{  //Play
+			view.getMusicPlay().setText("\u23F8");
+			view.getlobbyMusicPlayer().play();
+		}
+		else if(view.getMusicPlay().getText() == "\u23F8")
+		{  //Pause
+			view.getMusicPlay().setText("\u25B6");
+			view.getlobbyMusicPlayer().pause();
+		}
 	}
 
 	private void stopMusic(){

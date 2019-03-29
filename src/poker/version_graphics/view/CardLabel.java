@@ -45,7 +45,7 @@ public class CardLabel extends Label {
 		}
 
 		else {
-			Image cardback = new Image(this.getClass().getClassLoader().getResourceAsStream("poker/images/cardback.png"));
+			Image cardback = new Image(this.getClass().getClassLoader().getResourceAsStream("poker/images/background/pokerback.jpg"));
 			ImageView imvback = new ImageView(cardback);
 			imvback.fitHeightProperty().bind(this.heightProperty());
 			imvback.fitWidthProperty().bind(this.widthProperty());

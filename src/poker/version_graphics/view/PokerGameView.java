@@ -130,12 +130,12 @@ public class PokerGameView {
 		return controls.remPlayer;
 	}
 
-	public MenuItem getAutoshuffle(){
-		return options.getAutoshuffle();
+	public MenuItem getFastShuffle(){
+		return options.getFastShuffle();
 	}
 
-	public void Toggleautoshuffleview(){
-		controls.toggleAutoshuffle();
+	public void ToggleFastShuffleview(){
+		controls.toggleFastShuffle();
 	}
 	public Scene getScene(){
 		return scene;

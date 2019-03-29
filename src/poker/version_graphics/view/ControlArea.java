@@ -29,7 +29,7 @@ public class ControlArea extends VBox{
     Button btnDeal = new Button("Deal");
     Button addPlayer = new Button("+ Player");
     Button remPlayer = new Button("- Player");
-    Boolean temp = false;
+    Boolean tempShuffle = false;
     Button musicPlay = new Button("\u25B6");
     Button musicStop = new Button ("\u25A0");
     Slider volume = new Slider(0,1,0);
@@ -42,6 +42,7 @@ public class ControlArea extends VBox{
 
     public ControlArea() {
     	super(); // Always call super-constructor first !!
+
         volume.setPrefWidth(100);
         HBox mediaBox = new HBox(musicPlay,musicStop,volume);
         mediaBox.setSpacing(5);
@@ -49,28 +50,30 @@ public class ControlArea extends VBox{
         lobbyMusicPlayer = new MediaPlayer(lobbyMusic);
         lobbyMusicPlayer.setAutoPlay(false);
         lobbyMusicPlayer.setVolume(0.0);
+
         HBox topBox = new HBox(result);
         HBox deckBox = new HBox(classic,dog,bird);
-        HBox bottomBox = new HBox(lblDeck,remPlayer,addPlayer, decks,deckBox,mediaBox, spacer, btnShuffle, btnDeal);
         deckBox.setSpacing(10);
         deckBox.setId("deckbox");
+        HBox bottomBox = new HBox(lblDeck,remPlayer,addPlayer, decks,deckBox,mediaBox, spacer, btnShuffle, btnDeal);
+
         this.getChildren().addAll(topBox,bottomBox);
-    	//this.getChildren().addAll(result,lblDeck,remPlayer,addPlayer, decks,deckbox, spacer, btnShuffle, btnDeal);
         bottomBox.setMargin(deckBox, new Insets(0,0,4,-15));
         HBox.setHgrow(spacer, Priority.ALWAYS); // Use region to absorb resizing
+
         this.setId("controlArea"); // Unique ID in the CSS
         bottomBox.setId("controlBox");
+        musicPlay.setId("mediaButton");
+        musicStop.setId("mediaButton");
 
     }
     
     public void linkDeck(DeckOfCards deck) {
     	lblDeck.setDeck(deck);
     }
-    public void toggleAutoshuffle(){
-
-       temp = !temp;
-       btnShuffle.setDisable(temp);
-
+    public void toggleFastShuffle(){
+       tempShuffle = !tempShuffle;
+       btnShuffle.setDisable(tempShuffle);
     }
 
     public static ArrayList<String> getDecks(){
