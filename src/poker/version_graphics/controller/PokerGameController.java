@@ -114,18 +114,13 @@ public class PokerGameController {
 
 			//animation
 			ScaleTransition shrink = new ScaleTransition(Duration.millis(0));
-			shrink.setToX(0);
-
 			ScaleTransition grow = new ScaleTransition(Duration.millis(500));
-			grow.setToX(1.0);
-
-			ScaleTransition shrink2 = new ScaleTransition(Duration.millis(0));
+			shrink.setToX(0);
 			shrink.setToY(0);
-
-			ScaleTransition grow2 = new ScaleTransition(Duration.millis(500));
+			grow.setToX(1.0);
 			grow.setToY(1.0);
 
-			SequentialTransition sequence = new SequentialTransition(pp,shrink,grow,shrink2,grow2);
+			SequentialTransition sequence = new SequentialTransition(pp,shrink,grow);
 			sequence.play();
 
 		} else {
@@ -138,10 +133,25 @@ public class PokerGameController {
 
 	private void remPlayer() {
 		if (PokerGame.NUM_PLAYERS > 1) {
-			model.remPlayer();
-			view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS - 1);
-			view.getPp().updatePlayerDisplay();
-			PokerGame.NUM_PLAYERS--;
+
+			//animation
+			ScaleTransition shrink = new ScaleTransition(Duration.millis(500));
+			ScaleTransition grow = new ScaleTransition(Duration.millis(0));
+			shrink.setToX(0);
+			shrink.setToY(0);
+			grow.setToX(1.0);
+			grow.setToY(1.0);
+
+			SequentialTransition sequence = new SequentialTransition(view.getPlayerPane(PokerGame.NUM_PLAYERS-1),grow, shrink);
+			sequence.play();
+
+			sequence.setOnFinished(event -> {
+
+				model.remPlayer();
+				view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS - 1);
+				PokerGame.NUM_PLAYERS--;
+			});
+
 		}
 
 		else {
