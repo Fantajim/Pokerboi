@@ -142,7 +142,9 @@ public class PokerGameController {
 			view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS - 1);
 			view.getPp().updatePlayerDisplay();
 			PokerGame.NUM_PLAYERS--;
-		} else {
+		}
+
+		else {
 			Alert alert = new Alert(AlertType.ERROR, "Min Player count reached (1)");
 			alert.showAndWait();
 
