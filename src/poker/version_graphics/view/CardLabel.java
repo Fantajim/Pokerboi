@@ -46,13 +46,13 @@ public class CardLabel extends Label {
 			imv.fitWidthProperty().bind(this.widthProperty());
 			imv.setPreserveRatio(true);
 
-			sequence.setOnFinished(e -> this.setGraphic(imv)); //image override after first animation is complete (DOESNT WORK)
-
 			ScaleTransition grow = new ScaleTransition(Duration.millis(500));
-			grow.setToX(1.0);
-
 			SequentialTransition sequence2 = new SequentialTransition(this,grow);
-			sequence.setOnFinished(e ->sequence2.play()); //sequence 2 should play after sequence 1 (WORKS)
+			sequence.setOnFinished(e ->{
+				this.setGraphic(imv);
+				grow.setToX(1.0);
+				sequence2.play();
+			});
 		}
 
 		else {
