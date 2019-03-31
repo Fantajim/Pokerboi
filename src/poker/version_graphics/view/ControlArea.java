@@ -50,12 +50,14 @@ public class ControlArea extends VBox{
         lobbyMusicPlayer = new MediaPlayer(lobbyMusic);
         lobbyMusicPlayer.setAutoPlay(false);
         lobbyMusicPlayer.setVolume(0.0);
+        mediaBox.setAlignment(Pos.BOTTOM_CENTER);
 
         HBox topBox = new HBox(result);
         HBox deckBox = new HBox(classic,dog,bird);
         deckBox.setSpacing(10);
         deckBox.setId("deckbox");
         HBox bottomBox = new HBox(lblDeck,remPlayer,addPlayer, decks,deckBox,mediaBox, spacer, btnShuffle, btnDeal);
+        bottomBox.setAlignment(Pos.BOTTOM_CENTER);
 
         this.getChildren().addAll(topBox,bottomBox);
         bottomBox.setMargin(deckBox, new Insets(0,0,4,-15));
