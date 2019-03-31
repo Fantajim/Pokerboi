@@ -46,9 +46,9 @@ public class CardLabel extends Label {
 			imv.fitWidthProperty().bind(this.widthProperty());
 			imv.setPreserveRatio(true);
 
-			ScaleTransition grow = new ScaleTransition(Duration.millis(500));
-			SequentialTransition sequence2 = new SequentialTransition(this,grow);
 			sequence.setOnFinished(e ->{
+				ScaleTransition grow = new ScaleTransition(Duration.millis(500));
+				SequentialTransition sequence2 = new SequentialTransition(this,grow);
 				this.setGraphic(imv);
 				grow.setToX(1.0);
 				sequence2.play();
