@@ -25,7 +25,7 @@ switch (player1.getHandType()) {
             }
 //Handle special case of Ace,2,3,4,5 being the lowest Straight
             case Straight: {
-                for (Card c : player1.getCards())
+                for (Card c : player1.getCards()) //add cards from player 1
                 {
                     hand1Combo.add(c);
                 }
@@ -37,8 +37,8 @@ switch (player1.getHandType()) {
                 hand1Combo.get(4).getRank() == Card.Rank.Ace){
                     Collections.rotate(hand1Combo,1); //Put Ace at first position
                 }
-//default combo handler
-                for (Card c : player2.getCards()) //add cards from player2
+//same for Player 2
+                for (Card c : player2.getCards()) //add cards from player 2
                 {
                     hand2Combo.add(c);
                 }
@@ -53,7 +53,7 @@ switch (player1.getHandType()) {
                 break;
 
             }
-            default: {
+            default: { //Default combo handler
 
                 for (Card c : player1.getCards())
                 {
@@ -64,7 +64,7 @@ switch (player1.getHandType()) {
                 {
                     if (c.getCombo() == true ) hand2Combo.add(c);
                     if (c.getCombo() == false) hand2High.add(c);
-                    //&& !hand2Combo.contains(c.getRank()) not working
+
                 }
                 hand1Combo.sort(Comparator.comparing(Card::getRank));
                 hand1High.sort(Comparator.comparing(Card::getRank));
@@ -74,7 +74,7 @@ switch (player1.getHandType()) {
             }
 }
 
-//Check the hands that dont have a combination against each other starting from the end
+//Check  Highhands against each other starting from the end
             if (hand1High.size() == 5){
                 int highCounter = hand1High.size() - 1;
                 while (result == 99) {
@@ -95,15 +95,15 @@ switch (player1.getHandType()) {
                 }
             }
             else {
-                int comboCounter = hand1Combo.size() - 1;
+                int comboCounter = hand1Combo.size() - 1; //give comboCounter the hand size
                 int highCounter;
                if(hand1High.size() > 0 && hand2High.size() > 0) {
-                   highCounter = hand1High.size() - 1;
+                   highCounter = hand1High.size() - 1; //give highCounter the hand size
                }
                else {
                     highCounter = 0;
                }
-                //Check the hands that have a combination against each other starting from the end
+//Check the hands that have a combination against each other starting from the end
                 while (result == 99) {
                     if (hand1Combo.get(comboCounter).getRank().ordinal() > hand2Combo.get(comboCounter).getRank().ordinal()) {
                         result = 1;
@@ -113,7 +113,7 @@ switch (player1.getHandType()) {
                     }
                     if (hand1Combo.get(comboCounter).getRank().ordinal() == hand2Combo.get(comboCounter).getRank().ordinal()) {
 
-                        //If there are no more ComboCards switch to remaining HighCards to determine winner or possible real Tie
+//If there are no more ComboCards switch to remaining HighCards to determine winner or possible real Tie
                         if (comboCounter == 0) {
 
                                 if (hand1High.get(highCounter).getRank().ordinal() > hand2High.get(highCounter).getRank().ordinal()) {
@@ -143,7 +143,7 @@ switch (player1.getHandType()) {
         }
 
 
-//Sorts FullHouse hands
+                    //Sorts FullHouse hands
                    public static ArrayList<Card> fullHouseSort (ArrayList < Card > cards) {
                        ArrayList<Card> clonedCards = (ArrayList<Card>) cards.clone();
                        ArrayList<Card> sortedCards = new ArrayList<Card>();

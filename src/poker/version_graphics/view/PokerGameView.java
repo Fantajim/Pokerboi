@@ -23,6 +23,7 @@ import javafx.scene.image.ImageView;
 import poker.version_graphics.model.Card;
 
 import javax.swing.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -40,8 +41,6 @@ public class PokerGameView {
 	private Scene scene;
 	private PlayerPane pp;
 
-
-	
 	public PokerGameView(Stage stage, PokerGameModel model) {
 		this.model = model;
 		this.stage = stage;
@@ -54,8 +53,6 @@ public class PokerGameView {
 		options = new Optionbar();
 		controls = new ControlArea();
 
-
-
 		// Create all of the player panes we need, and put them into an HBox
 		players = new FlowPane();
 		for (int i = 0; i < PokerGame.NUM_PLAYERS; i++) {
@@ -67,30 +64,34 @@ public class PokerGameView {
 		//Backgrounds
 		Image bg1 = new Image(getClass().getClassLoader().getResourceAsStream("poker/images/background/bg1.jpg"));
 		BackgroundImage	background1 = new BackgroundImage(bg1, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
-
 		Image bg2 = new Image(getClass().getClassLoader().getResourceAsStream("poker/images/background/bg2.jpg"));
 		BackgroundImage	background2 = new BackgroundImage(bg2, BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
 
-		//Structure
+		//Control Area
+		controls.setBackground(new Background(background2));
 		controls.linkDeck(model.getDeck()); // link DeckLabel to DeckOfCards in the logic
+
+		//root BorderPane (main)
 		BorderPane root = new BorderPane(); // Put players and controls into a BorderPane
 		root.setTop(options);
-		players.setBackground(new Background(background1));
 		root.setCenter(players);
-		controls.setBackground(new Background(background2));
 		root.setBottom(controls);
+
+		//Screen size
 		Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
 		double width = screensize.getWidth();
 		double height = screensize.getHeight();
-		stage.setResizable(true); // Disallow resizing - which is difficult to get right with images
+		stage.setResizable(false); // Disallow resizing - which is difficult to get right with images
+
+		//Player FlowPane
+		players.setBackground(new Background(background1));
 		players.setPrefSize(width,height/2);
-		players.setMinSize(850,500);
 		players.setMaxSize(1200,500);
 		players.setAlignment(Pos.CENTER);
 		players.setHgap(20);
 		players.setVgap(20);
-
 		players.setPadding(new Insets(10,0,10,0));
+
 		scene = new Scene(root);
 		scene.getStylesheets().add(getClass().getResource("poker.css").toExternalForm());
 
@@ -99,6 +100,7 @@ public class PokerGameView {
         stage.show();
 
 	}
+
 
 	//Getters and Shuffle Toggle
 	public PlayerPane getPlayerPane(int i) {
@@ -119,9 +121,6 @@ public class PokerGameView {
 	public MenuItem getFastShuffle(){
 		return options.getFastShuffle();
 	}
-	public void ToggleFastShuffleview(){
-		controls.toggleFastShuffle();
-	}
 	public Scene getScene(){
 		return scene;
 	}
@@ -137,4 +136,7 @@ public class PokerGameView {
 	public Button getMusicStop(){return controls.musicStop;}
 	public MediaPlayer getlobbyMusicPlayer(){return controls.lobbyMusicPlayer;}
 	public Slider getVolume(){return controls.volume;}
+	public void ToggleFastShuffleview(){
+		controls.toggleFastShuffle();
+	}
 }

@@ -16,6 +16,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 import poker.version_graphics.model.DeckOfCards;
 
 import java.util.ArrayList;
@@ -43,19 +44,28 @@ public class ControlArea extends VBox{
     public ControlArea() {
     	super(); // Always call super-constructor first !!
 
+        //Music
         volume.setPrefWidth(100);
         HBox mediaBox = new HBox(musicPlay,musicStop,volume);
         mediaBox.setSpacing(5);
+        mediaBox.setAlignment(Pos.BOTTOM_CENTER);
         lobbyMusic = new Media(this.getClass().getClassLoader().getResource("poker/images/lobby.mp3").toExternalForm());
         lobbyMusicPlayer = new MediaPlayer(lobbyMusic);
         lobbyMusicPlayer.setAutoPlay(false);
         lobbyMusicPlayer.setVolume(0.0);
-        mediaBox.setAlignment(Pos.BOTTOM_CENTER);
+        lobbyMusicPlayer.setOnEndOfMedia(new Runnable() { //Repeat music track
+            @Override
+            public void run() {
+                lobbyMusicPlayer.seek(Duration.ZERO);
+                lobbyMusicPlayer.play();
+            }
+        });
+
 
         HBox topBox = new HBox(result);
         HBox deckBox = new HBox(classic,dog,bird);
         deckBox.setSpacing(10);
-        deckBox.setId("deckbox");
+
         HBox bottomBox = new HBox(lblDeck,remPlayer,addPlayer, decks,deckBox,mediaBox, spacer, btnShuffle, btnDeal);
         bottomBox.setAlignment(Pos.BOTTOM_CENTER);
 
@@ -63,7 +73,9 @@ public class ControlArea extends VBox{
         bottomBox.setMargin(deckBox, new Insets(0,0,4,-15));
         HBox.setHgrow(spacer, Priority.ALWAYS); // Use region to absorb resizing
 
-        this.setId("controlArea"); // Unique ID in the CSS
+        //Assign IDs
+        this.setId("controlArea");
+        deckBox.setId("deckbox");
         bottomBox.setId("controlBox");
         musicPlay.setId("mediaButton");
         musicStop.setId("mediaButton");

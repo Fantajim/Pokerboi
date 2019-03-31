@@ -105,7 +105,7 @@ public class PokerGameController {
 	}
 
 	private void addPlayer() {
-		if (PokerGame.NUM_PLAYERS < 4) {
+		if (PokerGame.NUM_PLAYERS < 8) {
 			model.addPlayer();
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
@@ -122,7 +122,6 @@ public class PokerGameController {
 
 			SequentialTransition sequence = new SequentialTransition(pp,shrink,grow);
 			sequence.play();
-
 		} else {
 			Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (4)");
 			alert.showAndWait();
@@ -146,7 +145,6 @@ public class PokerGameController {
 			sequence.play();
 
 			sequence.setOnFinished(event -> {
-
 				model.remPlayer();
 				view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS - 1);
 				PokerGame.NUM_PLAYERS--;
