@@ -89,7 +89,6 @@ public class PokerGameView {
 		players.setBackground(new Background(background1));
 		players.setPrefSize(width,height/2);
 		players.setMinSize(1200,500);
-		//players.setMaxSize(1200,500);
 		players.setAlignment(Pos.CENTER);
 		players.setHgap(10);
 		players.setVgap(10);
