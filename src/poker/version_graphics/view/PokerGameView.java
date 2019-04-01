@@ -40,6 +40,7 @@ public class PokerGameView {
 	private Optionbar options;
 	private Scene scene;
 	private PlayerPane pp;
+	private ArrayList<PlayerPane> ppList = new ArrayList<>();
 
 	public PokerGameView(Stage stage, PokerGameModel model) {
 		this.model = model;
@@ -59,6 +60,7 @@ public class PokerGameView {
 			pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(i)); // link to player object in the logic
 			players.getChildren().add(pp);
+			ppList.add(pp);
 		}
 
 		//Backgrounds
@@ -86,10 +88,11 @@ public class PokerGameView {
 		//Player FlowPane
 		players.setBackground(new Background(background1));
 		players.setPrefSize(width,height/2);
-		players.setMaxSize(1200,500);
+		players.setMinSize(1200,500);
+		//players.setMaxSize(1200,500);
 		players.setAlignment(Pos.CENTER);
-		players.setHgap(20);
-		players.setVgap(20);
+		players.setHgap(10);
+		players.setVgap(10);
 		players.setPadding(new Insets(10,0,10,0));
 
 		scene = new Scene(root);
@@ -100,7 +103,6 @@ public class PokerGameView {
         stage.show();
 
 	}
-
 
 	//Getters and Shuffle Toggle
 	public PlayerPane getPlayerPane(int i) {
@@ -136,7 +138,22 @@ public class PokerGameView {
 	public Button getMusicStop(){return controls.musicStop;}
 	public MediaPlayer getlobbyMusicPlayer(){return controls.lobbyMusicPlayer;}
 	public Slider getVolume(){return controls.volume;}
+	public ArrayList<PlayerPane> getPpList(){return ppList;}
 	public void ToggleFastShuffleview(){
 		controls.toggleFastShuffle();
+	}
+
+	//PlayerPane resizing
+	public void updatePpSize(){
+		if(ppList.size() < 5){
+			for(PlayerPane pp: ppList){
+				pp.setPrefSize(579,236);
+			}
+		}
+		else {
+			for(PlayerPane pp: ppList){
+				pp.setPrefSize(290,118);
+			}
+		}
 	}
 }

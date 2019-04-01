@@ -11,9 +11,9 @@ public static int findWinner(Player player1, Player player2) {
 
 int result = 99;
         ArrayList<Card> hand1Combo = new ArrayList<Card>();
-        ArrayList<Card> hand1High = new ArrayList<>();
+        ArrayList<Card> hand1High = new ArrayList<Card>();
         ArrayList<Card> hand2Combo = new ArrayList<Card>();
-        ArrayList<Card> hand2High = new ArrayList<>();
+        ArrayList<Card> hand2High = new ArrayList<Card>();
 
 switch (player1.getHandType()) {
 

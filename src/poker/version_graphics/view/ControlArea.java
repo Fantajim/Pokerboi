@@ -16,6 +16,7 @@ import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import poker.version_graphics.model.DeckOfCards;
 
@@ -61,7 +62,6 @@ public class ControlArea extends VBox{
             }
         });
 
-
         HBox topBox = new HBox(result);
         HBox deckBox = new HBox(classic,dog,bird);
         deckBox.setSpacing(10);
@@ -79,6 +79,7 @@ public class ControlArea extends VBox{
         bottomBox.setId("controlBox");
         musicPlay.setId("mediaButton");
         musicStop.setId("mediaButton");
+        result.setId("result");
 
     }
     

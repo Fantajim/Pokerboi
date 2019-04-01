@@ -110,6 +110,8 @@ public class PokerGameController {
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
 			view.getPlayers().getChildren().add(pp);
+			view.getPpList().add(pp);
+			view.updatePpSize();
 			PokerGame.NUM_PLAYERS++;
 
 			//animation
@@ -123,7 +125,7 @@ public class PokerGameController {
 			SequentialTransition sequence = new SequentialTransition(pp,shrink,grow);
 			sequence.play();
 		} else {
-			Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (4)");
+			Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (8)");
 			alert.showAndWait();
 
 		}
@@ -147,6 +149,8 @@ public class PokerGameController {
 			sequence.setOnFinished(event -> {
 				model.remPlayer();
 				view.getPlayers().getChildren().remove(PokerGame.NUM_PLAYERS - 1);
+				view.getPpList().remove(PokerGame.NUM_PLAYERS-1);
+				view.updatePpSize();
 				PokerGame.NUM_PLAYERS--;
 			});
 

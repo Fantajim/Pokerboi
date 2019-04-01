@@ -39,17 +39,13 @@ public class PlayerPane extends VBox {
             hboxCards.getChildren().add(lblCard);
         }
 
-        Dimension screensize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        double width = screensize.getWidth();
-        double height = screensize.getHeight();
-
     }
     
     public void setPlayer(Player player) {
     	this.player = player;
     	updatePlayerDisplay(); // Immediately display the player information
     }
-    
+
     public void updatePlayerDisplay() {
     	lblName.setText(player.getPlayerName());
     	for (int i = 0; i < Player.HAND_SIZE; i++) {

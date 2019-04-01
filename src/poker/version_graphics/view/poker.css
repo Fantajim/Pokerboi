@@ -24,7 +24,7 @@
 }
 
 #controlArea {
-    -fx-spacing: 15.0px;
+    -fx-spacing: 10.0px;
     -fx-padding: 5.0px;
     -fx-border-color: black;
     -fx-border-width: 2.0px;
@@ -65,4 +65,9 @@
 #mediaButton{
 -fx-pref-height:20;
 -fx-pref-width:40;
+}
+
+#result{
+-fx-font-family:Arial;
+-fx-font-weight:bolder;
 }
