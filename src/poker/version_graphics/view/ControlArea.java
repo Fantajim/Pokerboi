@@ -82,15 +82,18 @@ public class ControlArea extends VBox{
         result.setId("result");
 
     }
-    
+
     public void linkDeck(DeckOfCards deck) {
     	lblDeck.setDeck(deck);
     }
+
+    //Toggle for fastshuffle
     public void toggleFastShuffle(){
        tempShuffle = !tempShuffle;
        btnShuffle.setDisable(tempShuffle);
     }
 
+    //Get all checked deckboxes
     public static ArrayList<String> getDecks(){
         ArrayList<String>temp = new ArrayList<>();
         if ((classic.isSelected()))temp.add(classic.getText());
