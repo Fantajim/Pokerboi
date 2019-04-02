@@ -96,6 +96,9 @@ import java.util.Comparator;
                     count++;
                     if (count == 4) {
                         straightFound = true;
+                        for(Card c:cards)
+                            c.setCombo(true);
+
                     }
                 }
             }
@@ -104,6 +107,8 @@ import java.util.Comparator;
                         clonedCards.get(1).getRank() == Card.Rank.Three && clonedCards.get(2).getRank() == Card.Rank.Four &&
                         clonedCards.get(3).getRank() == Card.Rank.Five) {
                     straightFound = true;
+                    for(Card c:cards)
+                        c.setCombo(true);
                 }
             }
 
@@ -120,6 +125,8 @@ import java.util.Comparator;
                                 if (cards.get(i).getSuit() == cards.get(j).getSuit() && cards.get(i).getSuit() == cards.get(k).getSuit()
                                         && cards.get(i).getSuit() == cards.get(l).getSuit() && cards.get(i).getSuit() == cards.get(m).getSuit()) {
                                     flushFound = true;
+                                    for(Card c:cards)
+                                        c.setCombo(true);
                                 }
                             }
                         }
@@ -175,7 +182,11 @@ import java.util.Comparator;
 
         public static boolean isStraightFlush(ArrayList<Card> cards) {
             boolean straightFlushFound = false;
-            if (isStraight(cards) && isFlush(cards) == true) straightFlushFound = true;
+            if (isStraight(cards) && isFlush(cards) == true){
+                straightFlushFound = true;
+                for(Card c:cards)
+                    c.setCombo(true);
+            }
             return straightFlushFound;
         }
 
@@ -188,8 +199,10 @@ import java.util.Comparator;
             clonedCards.get(1).getRank() == Card.Rank.Jack &&
             clonedCards.get(2).getRank() == Card.Rank.Queen &&
             clonedCards.get(3).getRank() == Card.Rank.King &&
-            clonedCards.get(4).getRank() == Card.Rank.Ace)
+            clonedCards.get(4).getRank() == Card.Rank.Ace) {
             royalFlushFound = true;
+            for(Card c:cards)
+                c.setCombo(true);}
             return royalFlushFound;
         }
 
