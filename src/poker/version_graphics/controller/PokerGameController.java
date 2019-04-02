@@ -70,7 +70,6 @@ public class PokerGameController {
 				p.discardHand();
 				for (int j = 0; j < Player.HAND_SIZE; j++) {
 					Card card = deck.dealCard();
-					//maybe animation
 					p.addCard(card);
 				}
 				//method comparing
