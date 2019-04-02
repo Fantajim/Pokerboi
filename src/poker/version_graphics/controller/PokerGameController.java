@@ -207,18 +207,8 @@ public class PokerGameController {
               }
         }
         win = "Winner: ";
-		int counter = 0;
 		for (Player p : players) {
-			win = win.concat(p.getPlayerName()+" with "+p.getHandType()+" of ");
-			for(Card c:p.getCards())
-				if(c.getCombo()==true)win = win.concat(c.getRank()+" ");
-				else counter++;
-				if (counter ==5){
-					ArrayList<Card> clonedCards = (ArrayList<Card>) p.getCards().clone();
-					clonedCards.sort(Comparator.comparing(Card::getRank));
-					win=win.concat(clonedCards.get(4).getRank().toString());
-
-				}
+			win = win.concat(p.getPlayerName()+" with "+p.getHandType()+" ");
 		}
 		return win;
 	}
