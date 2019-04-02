@@ -69,7 +69,4 @@ public class Card {
         return combo;
     }
 
-    /* public int compareTo(Card o) {
-        return this.compareTo(o);
-    }*/
 }

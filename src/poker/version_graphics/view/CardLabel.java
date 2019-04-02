@@ -62,7 +62,6 @@ public class CardLabel extends Label {
 			imvback.fitWidthProperty().bind(this.widthProperty());
 			imvback.setPreserveRatio(true);
 			this.setGraphic(imvback);
-		//this.setGraphic(null);
 		}
 	}
 
