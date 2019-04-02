@@ -77,10 +77,10 @@ public class PokerGameController {
 				PlayerPane pp = view.getPlayerPane(i);
 				pp.updatePlayerDisplay();
 			}
-			playerwinner = tieFind();
-            view.getResult().setText(playerwinner);
+			playerwinner = tieFind(); //Call tieFind() Method
+            view.getResult().setText(playerwinner); //Announce winner String
 
-		} else if (view.getShuffleButton().isDisable() == true) {
+		} else if (view.getShuffleButton().isDisable() == true) { //Disable original Shuffle button
 			if (trigger == false) {
 				view.getDealButton().setText("Shuffle");
 				trigger = !trigger;
@@ -107,6 +107,7 @@ public class PokerGameController {
 
 	private void addPlayer() {
 		if (PokerGame.NUM_PLAYERS < 8) {
+
 			model.addPlayer();
 			PlayerPane pp = new PlayerPane();
 			pp.setPlayer(model.getPlayer(PokerGame.NUM_PLAYERS));
@@ -125,7 +126,11 @@ public class PokerGameController {
 
 			SequentialTransition sequence = new SequentialTransition(pp,shrink,grow);
 			sequence.play();
-		} else {
+
+		}
+
+		else {
+
 			Alert alert = new Alert(AlertType.ERROR, "Max Player count reached (8)");
 			alert.showAndWait();
 
