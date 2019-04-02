@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 
     public enum HandType {
-        HighCard, OnePair, TwoPair, ThreeOfAKind, Straight, Flush, FullHouse, FourOfAKind, StraightFlush;
+        HighCard, OnePair, TwoPair, ThreeOfAKind, Straight, Flush, FullHouse, FourOfAKind, StraightFlush, RoyalFlush;
 
 
         /**
@@ -28,7 +28,7 @@ import java.util.Comparator;
             if (isFullHouse(cards)) currentEval = FullHouse;
             if (isFourOfAKind(cards)) currentEval = FourOfAKind;
             if (isStraightFlush(cards)) currentEval = StraightFlush;
-
+            if (isRoyalFlush(cards)) currentEval = RoyalFlush;
             return currentEval;
         }
 
@@ -70,7 +70,6 @@ import java.util.Comparator;
         }
 
         public static boolean isThreeOfAKind(ArrayList<Card> cards) {
-            // TODO
             boolean threeFound = false;
             for (int i = 0; i < cards.size() - 2 && !threeFound; i++) {
                 for (int j = i + 1; j < cards.size() - 1 && !threeFound; j++) {
@@ -88,7 +87,6 @@ import java.util.Comparator;
         }
 
         public static boolean isStraight(ArrayList<Card> cards) {
-            // TODO
             boolean straightFound = false;
             int count = 0;
             ArrayList<Card> clonedCards = (ArrayList<Card>) cards.clone();
@@ -113,7 +111,6 @@ import java.util.Comparator;
         }
 
         public static boolean isFlush(ArrayList<Card> cards) {
-            // TODO
             boolean flushFound = false;
             for (int i = 0; i < cards.size() - 4 && !flushFound; i++) {
                 for (int j = i + 1; j < cards.size() - 3 && !flushFound; j++) {
@@ -133,7 +130,6 @@ import java.util.Comparator;
         }
 
         public static boolean isFullHouse(ArrayList<Card> cards) {
-            // TODO
             ArrayList<Card> clonedCards = (ArrayList<Card>) cards.clone();
             boolean firstThreeFound = false;
             boolean pairFound = false;
@@ -158,7 +154,6 @@ import java.util.Comparator;
         }
 
         public static boolean isFourOfAKind(ArrayList<Card> cards) {
-            // TODO
             boolean fourFound = false;
             for (int i = 0; i < cards.size() - 3 && !fourFound; i++) {
                 for (int j = i + 1; j < cards.size() - 2 && !fourFound; j++) {
@@ -182,6 +177,20 @@ import java.util.Comparator;
             boolean straightFlushFound = false;
             if (isStraight(cards) && isFlush(cards) == true) straightFlushFound = true;
             return straightFlushFound;
+        }
+
+        public static boolean isRoyalFlush(ArrayList<Card> cards) {
+            ArrayList<Card> clonedCards = (ArrayList<Card>) cards.clone();
+            clonedCards.sort(Comparator.comparing(Card::getRank));
+            boolean royalFlushFound = false;
+            if (isFlush(cards) == true &&
+            clonedCards.get(0).getRank() == Card.Rank.Ten &&
+            clonedCards.get(1).getRank() == Card.Rank.Jack &&
+            clonedCards.get(2).getRank() == Card.Rank.Queen &&
+            clonedCards.get(3).getRank() == Card.Rank.King &&
+            clonedCards.get(4).getRank() == Card.Rank.Ace)
+            royalFlushFound = true;
+            return royalFlushFound;
         }
 
         public static String isHighest(ArrayList<String> tocheck){
