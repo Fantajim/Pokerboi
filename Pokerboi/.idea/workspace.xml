@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c734fa3c-a154-4891-88a5-c699bde849b2" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Pokerboi$PokerGame.ic" NAME="PokerGame Coverage Results" MODIFIED="1554188779452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Pokerboi" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PlayerPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="855">
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PokerGameView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1110">
+              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/HandTypeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/TieTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/Tie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/controller/PokerGameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/PokerGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/DeckOfCards.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/Optionbar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/DeckLabel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getPlayerPane</find>
+      <find>arraylist</find>
+      <find>compareto</find>
+      <find>createGame</find>
+      <find>set</find>
+      <find>tieFinder</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/poker/images</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Backup" />
+      </map>
+    </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Prototype" />
+              </list>
+            </value>
+          </entry>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="FHNW/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/PokerMainMenu.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/controller/PokerMainController.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/PokerMainView.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/Gamemenu.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/Playerselect.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/PlayerSelect.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/Mainmenu.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/PokerGameModel.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/Player.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/Optionbar.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/poker.css" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/PlayerPane.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/Tie.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/HandTypeTest.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/HandType.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/Card.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/CardLabel.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/ControlArea.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/controller/PokerGameController.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/PokerGame.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/view/PokerGameView.java" />
+        <option value="$PROJECT_DIR$/src/poker/version_graphics/model/TieTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Pokerboi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pokerboi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pokerboi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pokerboi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pokerboi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pokerboi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="poker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pokerboi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pokerboi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="poker" type="462c0819:PsiDirectoryNode" />
+              <item name="version_graphics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pokerboi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pokerboi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="poker" type="462c0819:PsiDirectoryNode" />
+              <item name="version_graphics" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pokerboi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554379936900" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="GitLabConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="poker.version_graphics.view" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.HandTypeTest">
+    <configuration name="PokerGame (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="poker.version_text.PokerGame" />
+      <module name="Pokerboi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="poker.version_text.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokerGame" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="MAIN_CLASS_NAME" value="poker.version_graphics.PokerGame" />
+      <module name="Pokerboi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="poker.version_graphics.PokerGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HandTypeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pokerboi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="poker.version_graphics.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="poker.version_graphics.model" />
+      <option name="MAIN_CLASS_NAME" value="poker.version_graphics.model.HandTypeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Pokerboi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="poker.version_graphics.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="poker.version_graphics.model" />
+      <option name="MAIN_CLASS_NAME" value="poker.version_graphics.model.TieTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.PokerGame" />
+      <item itemvalue="Application.PokerGame (1)" />
+      <item itemvalue="JUnit.HandTypeTest" />
+      <item itemvalue="JUnit.TieTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HandTypeTest" />
+        <item itemvalue="JUnit.TieTest" />
+        <item itemvalue="Application.PokerGame (1)" />
+        <item itemvalue="JUnit.HandTypeTest" />
+        <item itemvalue="Application.PokerGame (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c734fa3c-a154-4891-88a5-c699bde849b2" name="Default Changelist" comment="" />
+      <created>1552414655704</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552414655704</updated>
+    </task>
+    <task id="LOCAL-00014" summary="tesst">
+      <created>1552710945136</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1552710945136</updated>
+    </task>
+    <task id="LOCAL-00015" summary="tesst">
+      <created>1552712942194</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1552712942194</updated>
+    </task>
+    <task id="LOCAL-00016" summary="autoshuffle implemented">
+      <created>1552775853993</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1552775853993</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Kartendeck Auswahl erstellt">
+      <created>1552881503348</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1552881503348</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Kartendeck Auswahl erstellt">
+      <created>1552950727508</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1552950727508</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PokerView cleanup">
+      <created>1552964774332</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1552964774332</updated>
+    </task>
+    <task id="LOCAL-00020" summary="implemented dynamic Player addition/removal">
+      <created>1552974512337</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1552974512337</updated>
+    </task>
+    <task id="LOCAL-00021" summary="removed Mainmenu Players selection 1-3">
+      <created>1552981898606</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1552981898606</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Mainmenu removed">
+      <created>1552987259402</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1552987259403</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Mainmenu removed">
+      <created>1552987820590</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1552987820590</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Mainmenu removed bugfix">
+      <created>1552987917979</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1552987917979</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Mainmenu removed bugfix">
+      <created>1552990060132</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1552990060133</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Mainmenu removed bugfix">
+      <created>1552991998020</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1552991998020</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Mainmenu removed bugfix">
+      <created>1552997932723</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1552997932723</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Mainmenu removed bugfix">
+      <created>1552998221695</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1552998221695</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Mainmenu removed bugfix">
+      <created>1552998796805</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1552998796805</updated>
+    </task>
+    <task id="LOCAL-00030" summary="github due nid so bloed">
+      <created>1552998832891</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1552998832891</updated>
+    </task>
+    <task id="LOCAL-00031" summary="placeholder">
+      <created>1552998898544</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1552998898544</updated>
+    </task>
+    <task id="LOCAL-00032" summary="logic for straight &amp; straightflush">
+      <created>1553082144598</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1553082144598</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Game starts with 2 players now&#10;bug fix: adding/removing players">
+      <created>1553085508867</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1553085508867</updated>
+    </task>
+    <task id="LOCAL-00034" summary="&quot;+&quot; and &quot;-&quot; player button swapped">
+      <created>1553085662084</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1553085662084</updated>
+    </task>
+    <task id="LOCAL-00035" summary="cleanup">
+      <created>1553092618087</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1553092618087</updated>
+    </task>
+    <task id="LOCAL-00036" summary="cleanup2">
+      <created>1553092746973</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1553092746973</updated>
+    </task>
+    <task id="LOCAL-00037" summary="playerpane size">
+      <created>1553166730433</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1553166730433</updated>
+    </task>
+    <task id="LOCAL-00038" summary="playerpane size">
+      <created>1553166850728</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1553166850728</updated>
+    </task>
+    <task id="LOCAL-00039" summary="test">
+      <created>1553168195900</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1553168195900</updated>
+    </task>
+    <task id="LOCAL-00040" summary="added cardback">
+      <created>1553179294646</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1553179294646</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added cardback">
+      <created>1553179351937</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1553179351937</updated>
+    </task>
+    <task id="LOCAL-00042" summary="cleanup logic&#10;root card graphic files removed">
+      <created>1553271359689</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1553271359689</updated>
+    </task>
+    <task id="LOCAL-00043" summary="cleanup logic&#10;root card graphic files removed">
+      <created>1553322044442</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1553322044442</updated>
+    </task>
+    <task id="LOCAL-00044" summary="evaluation, tie and tieTest implemented">
+      <created>1553550458386</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1553550458387</updated>
+    </task>
+    <task id="LOCAL-00045" summary="added Straights to TieTest">
+      <created>1553565635078</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1553565635078</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added Winner label and removed alert">
+      <created>1553567008342</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1553567008342</updated>
+    </task>
+    <task id="LOCAL-00047" summary="implemented lobby music and controls">
+      <created>1553634606398</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1553634606398</updated>
+    </task>
+    <task id="LOCAL-00048" summary="implemented lobby music and controls">
+      <created>1553634614757</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1553634614757</updated>
+    </task>
+    <task id="LOCAL-00049" summary="very very very very basic animations implemented">
+      <created>1553647874504</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1553647874504</updated>
+    </task>
+    <task id="LOCAL-00050" summary="autoshuffle changed to fastshuffle&#10;implemented pause button in lobbymusic">
+      <created>1553828984863</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1553828984865</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Poker back card changed">
+      <created>1553864060683</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1553864060684</updated>
+    </task>
+    <task id="LOCAL-00052" summary="8 players implemented">
+      <created>1554161382563</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1554161382565</updated>
+    </task>
+    <task id="LOCAL-00053" summary="8 players implemented">
+      <created>1554161423608</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1554161423608</updated>
+    </task>
+    <task id="LOCAL-00054" summary="cleanup">
+      <created>1554164023238</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1554164023239</updated>
+    </task>
+    <task id="LOCAL-00055" summary="implemented Royal Flush + Royal Flush testcase">
+      <created>1554166407042</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1554166407043</updated>
+    </task>
+    <task id="LOCAL-00056" summary="bugfix and added combotype to winner">
+      <created>1554190732809</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1554190732810</updated>
+    </task>
+    <task id="LOCAL-00057" summary="winner fix">
+      <created>1554191307113</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1554191307113</updated>
+    </task>
+    <task id="LOCAL-00058" summary="old comment deleting">
+      <created>1554191699189</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1554191699189</updated>
+    </task>
+    <task id="LOCAL-00059" summary="old comment deleting">
+      <created>1554191845775</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1554191845775</updated>
+    </task>
+    <task id="LOCAL-00060" summary="old comment deleting">
+      <created>1554373254605</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1554373254606</updated>
+    </task>
+    <task id="LOCAL-00061" summary="cleanup2">
+      <created>1554376483566</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1554376483566</updated>
+    </task>
+    <task id="LOCAL-00062" summary="eclipse is best">
+      <created>1554377148652</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1554377148652</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="HandTypeTest - 2019.04.02 at 02h 46m 13s.xml">
+      <configuration name="HandTypeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HandTypeTest - 2019.04.02 at 02h 49m 00s.xml">
+      <configuration name="HandTypeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HandTypeTest - 2019.04.02 at 02h 49m 09s.xml">
+      <configuration name="HandTypeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TieTest - 2019.04.02 at 10h 44m 36s.xml">
+      <configuration name="TieTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TieTest - 2019.04.04 at 12h 19m 09s.xml">
+      <configuration name="TieTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TieTest - 2019.04.04 at 13h 19m 40s.xml">
+      <configuration name="TieTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TieTest - 2019.04.04 at 13h 23m 21s.xml">
+      <configuration name="TieTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TieTest - 2019.04.04 at 13h 24m 21s.xml">
+      <configuration name="TieTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TieTest - 2019.04.04 at 13h 25m 36s.xml">
+      <configuration name="TieTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HandTypeTest - 2019.04.04 at 14h 12m 19s.xml">
+      <configuration name="HandTypeTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49726027" visible="true" weight="0.35945073" />
+      <window_info id="Structure" order="1" sideWeight="0.5027397" side_tool="true" weight="0.28836834" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5008183" side_tool="true" weight="0.26171243" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49757674" weight="0.32876712" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32876712" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5016155" side_tool="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4983845" weight="0.32876712" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49919224" weight="0.32876712" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="11" weight="0.32876712" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32956383" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Mainmenu removed bugfix" />
+    <MESSAGE value="github due nid so bloed" />
+    <MESSAGE value="placeholder" />
+    <MESSAGE value="logic for straight &amp; straightflush" />
+    <MESSAGE value="Game starts with 2 players now&#10;bug fix: adding/removing players" />
+    <MESSAGE value="&quot;+&quot; and &quot;-&quot; player button swapped" />
+    <MESSAGE value="playerpane size" />
+    <MESSAGE value="test" />
+    <MESSAGE value="added cardback" />
+    <MESSAGE value="cleanup logic&#10;root card graphic files removed" />
+    <MESSAGE value="evaluation, tie and tieTest implemented" />
+    <MESSAGE value="added Straights to TieTest" />
+    <MESSAGE value="added Winner label and removed alert" />
+    <MESSAGE value="implemented lobby music and controls" />
+    <MESSAGE value="very very very very basic animations implemented" />
+    <MESSAGE value="autoshuffle changed to fastshuffle&#10;implemented pause button in lobbymusic" />
+    <MESSAGE value="Poker back card changed" />
+    <MESSAGE value="8 players implemented" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="implemented Royal Flush + Royal Flush testcase" />
+    <MESSAGE value="bugfix and added combotype to winner" />
+    <MESSAGE value="winner fix" />
+    <MESSAGE value="old comment deleting" />
+    <MESSAGE value="cleanup2" />
+    <MESSAGE value="eclipse is best" />
+    <option name="LAST_COMMIT_MESSAGE" value="eclipse is best" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/poker/version_graphics/model/Tie.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/poker/version_graphics/model/Tie.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/poker/version_graphics/model/Tie.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/RadioButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/controller/PokerMainController.java" />
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PokerMainMenu.java" />
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PokerMainView.java" />
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/Gamemenu.java" />
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PlayerSelect.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="8410" selection-start-line="8410" selection-end-line="8410" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/javafx/scene/control/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/scene/control/behavior/ButtonBehavior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/scene/control/skin/BehaviorSkinBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="e#3176#3853#0" expanded="true" />
+            <element signature="e#3852#3853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/EventHandlerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2850">
+          <caret line="190" selection-start-line="190" selection-end-line="190" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/CompositeEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/BasicEventDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/EventDispatchChainImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/event/EventUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33990">
+          <caret line="2493" selection-start-line="2493" selection-end-line="2493" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/tk/quantum/GlassViewEventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5565">
+          <caret line="430" selection-start-line="430" selection-end-line="430" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/glass/ui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7785">
+          <caret line="554" selection-start-line="554" selection-end-line="554" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3840">
+          <caret line="388" selection-start-line="388" selection-end-line="388" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/security/AccessController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5175">
+          <caret line="370" column="31" selection-start-line="370" selection-start-column="31" selection-end-line="370" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/images/back@2x.png" />
+    <entry file="file://$PROJECT_DIR$/src/poker/images/back.png" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="135" column="15" selection-start-line="135" selection-start-column="15" selection-end-line="135" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9270">
+          <caret line="656" selection-start-line="656" selection-end-line="656" />
+          <folding>
+            <element signature="e#15586#15587#0" expanded="true" />
+            <element signature="e#15631#15632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/images/background/bg3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/images/background/bg2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/images/background/bg1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/Mainmenu.java" />
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/poker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="22" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/PokerGameModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="53" column="24" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/HandType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/CardLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="63" column="37" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/ControlArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="100" column="57" selection-start-line="100" selection-start-column="57" selection-end-line="100" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PlayerPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/PokerGameView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/Tie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/controller/PokerGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/DeckOfCards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/Optionbar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/view/DeckLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/TieTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/PokerGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/poker/version_graphics/model/HandTypeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Pokerboi</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Pokerboi</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
